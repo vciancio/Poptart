@@ -29,7 +29,7 @@
 	</head>
 	
 	<body>
-		<div data-role="page" id="page" data-theme="b">
+		<div data-role="page" id="index" data-theme="b">
 			<header data-role="header" data-theme"b">
 				<div data-role = "navbar" data-position="fixed" data-theme"b">
 					<ul data-role="list-view">
@@ -39,27 +39,50 @@
 				</div>
 				<h1>Welcome to Poptart</h1>
 			</header>
-			<div data-role="main" class="ui-content">
-				
+			<div data-role="content" class="ui-content">
+				<nav>
+					<p><a href="#report" data-role ="button"> Report</a></p>
+					<p><a href="#database" data-role="button">Database</a></p>
+					<p><a href="#allies" data-role="button">Allied Organizations</a></p>
+					<p><a href="#contact" data-role="button">Contact</a></p>
+				</nav>
 			</div>
-			<nav>
-				<ul data-role="listview" data-inset="true" data-theme="b">
-					<li> <a href="./Report.html">Report</a></li>
-					<li><a href="/">Database</a>
-					<li><a href="/">Allied Organizations</a>
-					<li><a href="/contact">Contact</a>
-				</ul>
-			</nav>
-
-			<div data-role="footer" data-theme"b">
-
+		</div>
+		<div data-role="page" id="report" data-theme="b">
+			<header data-role="header">
+				<a href="#index" class="ui-btn-left"> Back </a>
+				<h1> Page 2 Here</h1>
+			</header>
+			<div data-role="content">
+				<p> Placeholder </p>
 			</div>
-
-			<footer>
-				<p>
-					&copy; Copyright  by ChristineRohacz
-				</p>
-			</footer>
+		</div>
+		<div data-role="page" id="database" data-theme="b" data-add-back-btn="true">
+			<header data-role="header">
+				<a href="#index" class="ui-btn-left"> Back </a>
+				<h2> List of Databases </h2>
+			</headeR>
+			<div data-role="content">
+				<p> Placeholder</p>
+			</div>
+		</div>
+		<div data-role="page" id="allies" data-theme="b" data-add-back-btn="true">
+			<header data-role="header">
+				<a href="#index" class="ui-btn-left"> Back </a>
+				<h3> Other CMCs </h3>
+			</header>
+			<div data-role="content">
+				<p> Placeholder</p>
+			</div>
+		</div>
+		<div data-role="page" id="contact" data-theme="b" data-add-back-btn="true">
+			<header data-role="header">
+				<a href="#index" class="ui-btn-left"> Back </a>
+				<h4> Contact info </h4>
+			</header>
+			<div data-role="content">
+				<p> contact us></p>
+			 </div>
 		</div>
 	</body>
 </html>

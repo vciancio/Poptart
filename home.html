@@ -23,65 +23,157 @@
 		<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 		<script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
 		<link rel="stylesheet" type="text/css" href="jquery.mobile-1.4.3.css"/>
+		<link rel ="stylesheet" type="text/css" href="navbar.css"/>
 	<script>
-	
+		$( "#mypanel" ).trigger( "updatelayout" );
 	</script>
 	</head>
 	
 	<body>
 		<div data-role="page" id="index" data-theme="b">
-			<header data-role="header" data-theme"b">
-				<div data-role = "navbar" data-position="fixed" data-theme"b">
-					<ul data-role="list-view">
-      					<li><a href="#" class="ui-btn ui-corner-all ui-icon-home ui-btn-icon-left">Home</a></li>
-     					<li><a href="#" class="ui-btn ui-corner-all ui-icon-search ui-btn-icon-left">Search</a></li>
-    				</ul>
-				</div>
-				<h1>Welcome to Poptart</h1>
-			</header>
-			<div data-role="content" class="ui-content">
-				<nav>
-					<p><a href="#report" data-role ="button"> Report</a></p>
-					<p><a href="#database" data-role="button">Database</a></p>
-					<p><a href="#allies" data-role="button">Allied Organizations</a></p>
+			<div data-role="panel" id="mypanel">
+    			<nav>
+					<p><a href="#CHC" data-role ="button"> Community Health Centers</a>
+					<p><a href="#resources" data-role="button">Resources</a></p>
+					<p><a href="#forums" data-role="button">Forums</a></p>
 					<p><a href="#contact" data-role="button">Contact</a></p>
 				</nav>
 			</div>
+			<!-- /panel -->
+			<header data-role="header" data-theme"b">
+				<h1>Salud Migrante</h1>
+				<div data-role="navbar" data-grid="b">
+    				<ul>
+        				<li><a href="#mypanel" data-icon="grid" data-role="button" data-mini="true" class="ui-btn">Menu </a></li>
+        				<li><a href="#index" data-icon="home" data-role="button" class="ui-btn">Home</a></li>
+        				<li><a href="#" data-icon="search" data-role="button" class="ui-btn">Search</a></li>
+    				</ul>
+				</div>
+				<!-- /navbar -->
+			</header>
+			<div data-role="content" class="ui-content">
+
+			</div>
 		</div>
-		<div data-role="page" id="report" data-theme="b">
+		
+		<!--PAGE 2-->
+		<div data-role="page" id="CHC" data-theme="b">
+			<div data-role="panel" id="mypanel">
+    			<nav>
+					<p><a href="#CHC" data-role ="button"> Community Health Centers</a>
+					<p><a href="#resources" data-role="button">Resources</a></p>
+					<p><a href="#forums" data-role="button">Forums</a></p>
+					<p><a href="#contact" data-role="button">Contact</a></p>
+				</nav>
+			</div><!-- /panel -->
 			<header data-role="header">
 				<a href="#index" class="ui-btn-left"> Back </a>
-				<h1> Page 2 Here</h1>
+				<h1> Community Health Centers</h1>
+				<div data-role="navbar" data-grid="b">
+    				<ul>
+        				<li><a href="#mypanel" data-icon="grid" data-role="button" data-mini="true" class="ui-btn"> Menu </a></li>
+        				<li><a href="#index" data-icon="home" data-role="button" class="ui-btn">Home</a></li>
+        				<li><a href="#" data-icon="search" data-role="button" class="ui-btn">Search</a></li>
+    				</ul>
+				</div><!-- /navbar -->
 			</header>
 			<div data-role="content">
-				<p> Placeholder </p>
+				<ul data-role="listview" data-autodividers="true" data-filter-placeholder="Search"data-filter="true" data-inset="true">
+    				<li><a href="index.html">Adam Kinkaid</a></li>
+    				<li><a href="index.html">Alex Wickerham</a></li>
+    				<li><a href="index.html">Avery Johnson</a></li>
+    				<li><a href="index.html">Bob Cabot</a></li>
+    				<li><a href="index.html">Caleb Booth</a></li>
+    				<li><a href="index.html">Christopher Adams</a></li>
+    				<li><a href="index.html">Culver James</a></li>
+				</ul>
 			</div>
 		</div>
-		<div data-role="page" id="database" data-theme="b" data-add-back-btn="true">
+		
+		<!--PAGE 3-->
+		<div data-role="page" id="resources" data-theme="b" data-add-back-btn="true">
+			<div data-role="panel" id="mypanel">
+    			<nav>
+					<p><a href="#CHC" data-role ="button"> Community Health Centers</a>
+					<p><a href="#resources" data-role="button">Resources</a></p>
+					<p><a href="#forums" data-role="button">Forums</a></p>
+					<p><a href="#contact" data-role="button">Contact</a></p>
+				</nav>
+			</div><!-- /panel -->
 			<header data-role="header">
 				<a href="#index" class="ui-btn-left"> Back </a>
-				<h2> List of Databases </h2>
-			</headeR>
+				<h2> Resources </h2>
+				<div data-role="navbar" data-grid="b">
+    				<ul>
+        				<li><a href="#mypanel" data-icon="grid" data-role="button" data-mini="true" class="ui-btn"> Menu </a></li>
+        				<li><a href="#index" data-icon="home" data-role="button" class="ui-btn">Home</a></li>
+        				<li><a href="#" data-icon="search" data-role="button" class="ui-btn">Search</a></li>
+    				</ul>
+				</div><!-- /navbar -->
+			</header>
 			<div data-role="content">
-				<p> Placeholder</p>
+    				<div class="ui-block-a">
+        <label for="grid-select-2" class="ui-hidden-accessible">Select</label>
+        <select id="grid-select-2" name="grid-select-2" data-shadow="false">
+            <option>Select</option>
+            <option value="1">The 1st Option</option>
+            <option value="2">The 2nt Option</option>
+            <option value="3">The 3rd Option</option>
+            <option value="4">The 4th Option</option>
+        </select>
+    </div>
 			</div>
 		</div>
-		<div data-role="page" id="allies" data-theme="b" data-add-back-btn="true">
+		
+		<!--PAGE 4-->
+		<div data-role="page" id="forums" data-theme="b" data-add-back-btn="true">
+			<div data-role="panel" id="mypanel">
+    			<nav>
+					<p><a href="#CHC" data-role ="button"> Community Health Centers</a>
+					<p><a href="#resources" data-role="button">Resources</a></p>
+					<p><a href="#forums" data-role="button">Forums</a></p>
+					<p><a href="#contact" data-role="button">Contact</a></p>
+				</nav>
+			</div><!-- /panel -->
 			<header data-role="header">
 				<a href="#index" class="ui-btn-left"> Back </a>
 				<h3> Other CMCs </h3>
+				<div data-role="navbar" data-grid="b">
+    				<ul>
+        				<li><a href="#mypanel" data-icon="grid" data-role="button" data-mini="true" class="ui-btn"> Menu </a></li>
+        				<li><a href="#index" data-icon="home" data-role="button" class="ui-btn">Home</a></li>
+        				<li><a href="#" data-icon="search" data-role="button" class="ui-btn">Search</a></li>
+    				</ul>
+				</div><!-- /navbar -->
 			</header>
 			<div data-role="content">
 				<p> Placeholder</p>
 			</div>
 		</div>
+		
+		<!--PAGE 5-->
 		<div data-role="page" id="contact" data-theme="b" data-add-back-btn="true">
+			<div data-role="panel" id="mypanel">
+    			<nav>
+					<p><a href="#CHC" data-role ="button"> Community Health Centers</a>
+					<p><a href="#resources" data-role="button">Resources</a></p>
+					<p><a href="#forums" data-role="button">Forums</a></p>
+					<p><a href="#contact" data-role="button">Contact</a></p>
+				</nav>
+			</div><!-- /panel -->
 			<header data-role="header">
 				<a href="#index" class="ui-btn-left"> Back </a>
 				<h4> Contact info </h4>
+				<div data-role="navbar" data-grid="b">
+    				<ul>
+        				<li><a href="#mypanel" data-icon="grid" data-role="button" data-mini="true" class="ui-btn"> Menu </a></li>
+        				<li><a href="#index" data-icon="home" data-role="button" class="ui-btn">Home</a></li>
+        				<li><a href="#" data-icon="search" data-role="button" class="ui-btn">Search</a></li>
+    				</ul>
+				</div><!-- /navbar -->
 			</header>
 			<div data-role="content">
-				<p> contact us></p>
+				<p> contact us</p>
 			 </div>
 		</div>
 	</body>

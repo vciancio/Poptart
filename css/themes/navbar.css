@@ -1,0 +1,51 @@
+/*Body*/
+
+p { 
+	display: block;
+	font-weight: normal;
+	text-overflow: ellipsis; 
+	font-family: Arial, Helvetica, sans-serif;
+	letter-spacing: 1px;
+	color: #fff;
+	line-height: 24px;
+	text-align: left;
+	outline: 0 !important; 
+	background-color: #a8a8a6;
+	width = 100px;
+}
+/*End Body*/
+
+/*NavBar elements - includes custom icons, menu, search bar, and home button */
+
+/* this is for the android icon who's png is in the css folder */
+.ui-icon-mylist:after { 
+	background-image:url("ic_drawer.png");
+	background-size: 18px 18px;
+}
+
+.ui-btn-left {
+left: 1.2em;
+position: absolute;
+padding-left: .2em;
+height:4px;
+}
+
+.ui-btn-right { 
+right:1.2em;
+padding-right: .2em;
+position:absolute;
+height: 4px;
+}
+
+/*End Navbar*/
+
+/*Panel*/
+
+nav, p { 
+	width: 250px;
+}
+
+.ui-panel-inner { 
+	width: 200px;
+	margin-left: -5px;
+}

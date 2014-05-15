@@ -1,31 +1,39 @@
 <!DOCTYPE html>
 <html lang="en" class="ui-mobile">
 	<head>
+		<title> Project Poptart>
 		<meta charset="utf-8">
-
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
 		Remove this if you use the .htaccess -->
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-
-		<title>HTML</title>
-		<meta name="description" content="">
 		<meta name="author" content="ChristineRohacz">
 
-
-		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+	<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
 		<link rel="shortcut icon" href="/favicon.ico">
 		<link rel="apple-touch-icon" href="/apple-touch-icon.png">
-		<!--Links to local files-->
 
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<!--Links to jQuery CDN -->
+		<!--Links to jQuery CDN and local CSS files -->
 		<!--<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css"> -->
+		<link rel="stylesheet" type="text/css" href="jquery.mobile-1.4.3.css"/>
+		<link rel="stylesheet" href="css/themes/swatches.css" />
+		<link rel="stylesheet" href="css/themes/jquery.mobile.icones.min.css"/>
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile.structure-1.4.2.min.css" />
+		<link rel="stylesheet" href="css/themes/navbar.css" />
 		<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 		<script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
-		<link rel="stylesheet" type="text/css" href="jquery.mobile-1.4.3.css"/>
-		<link rel ="stylesheet" type="text/css" href="navbar.css"/>
 	<script>
+		$(document).bind("mobileinit",function() { 
+			$.mobile.allowCrossDomainPages = true; 
+		});
+		//panel popUp
 		$( "#mypanel" ).trigger( "updatelayout" );
+		//Loading Icon
+		$(document).bind ('mobileinit',function() { 
+			$.mobile.loader.prototype.options.text="loading"; 
+			$.mobile.loader.prototype.options.textVisible="false"; 
+			$.mobile.loader.prototype.options.theme="a"; 
+			$.mobile.loader.prototype.options.html=""; 
 	</script>
 	</head>
 	
@@ -176,5 +184,7 @@
 				<p> contact us</p>
 			 </div>
 		</div>
+			<script src="phonegap.js"></script>
+			<!--instruct phonegap build to inject a platform specific version of phongap.js at buildtime-->
 	</body>
 </html>

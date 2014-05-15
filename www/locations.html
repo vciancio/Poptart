@@ -19,20 +19,25 @@
 		<link rel="stylesheet" type="text/css" href="css/index.css" />
     </head>
     <body>
-        <div data-role="page" id="index" data-theme="c">
+        <div data-role="page" id="locations" data-theme="c">
         	<div data-role="panel" id="mypanel">
         		<nav>
         			<p><a href="locations.html" rel="external" data-role ="button">Locations</a></p>
         		</nav>
         	</div>
         	<!--/panel-->
-        	<header class="ui-header" data-role="navbar" data-theme="c">
+        	<header data-role="navbar" class="ui-header" >
         		<a href="#mypanel" class="ui-btn-left" id="mygrid" data-role="button" data-icon="grid" data-inline="true" data-iconpos="center"></a>
         		<h1 class="ui-title"> Salud Migrante </h1>
         		<a href="" class="ui-btn-right" data-icon="search" data-role="button" data-inline="true" data-iconpos="center"></a>
         	</header>
         	<!--/header-->
         	<div data-role="content" class="ui-content">
+        	
+        	
+        	<!--PUT CONTENT HERE --> 
+        	
+        	
         	</div> 
         	<!--/content-->
         </div>
@@ -54,15 +59,6 @@
 				$.mobile.loader.prototype.options.theme="a"; 
 				$.mobile.loader.prototype.options.html="";
 			});  
-			<!--BUILT IN CACHE--> 
-			$.ajaxPrefilter( function(options, originalOptions, jqXHR) {
-			if ( applicationCache &&
-			 applicationCache.status != applicationCache.UNCACHED &&
-			 applicationCache.status != applicationCache.OBSOLETE ) {
-		 	// the important bit
-		 	options.isLocal = true;
-	}
-});
         </script>
         
     </body>

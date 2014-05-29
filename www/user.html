@@ -3,8 +3,8 @@
     <head>
         <meta name="format-detection" content="telephone=no" />
         <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
-		<meta name="viewport" content="height=device-height,width=device-width,initial-scale=1.0,maximum-scale=1.0" >       
- 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="height=device-height,width=device-width,initial-scale=1.0,maximum-scale=1.0" >
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="author" content="ChristineRohacz">
 		<meta charset="utf-8" />
 		<title>Poptart</title>
@@ -26,27 +26,18 @@
     		outside of transition -->
     		<div data-role="header" class="ui-header ui-bar-a">
     			<a href="/" rel="external" data-role="button" data-icon="flat-menu" data-iconpos="notext" data-theme="c" data-inline="true">Menu</a>
-    			<h1> Login</h1>
+    			<h1> User Profile</h1>
 				<a href="/settings.html" rel="external" data-role="button" data-icon="flat-settings" data-iconpos="notext" data-theme="c" data-inline="true">Settings</a>     		
 			</div><!--/header-->
-        <div data-role="content">
-        	<div id="loginArea"> 
-        		<h2> Login: </h2>
-        		<form id="loginForm" action="auth.php" method="PUT" data-ajax="false"> 
-        		<div data-role="fieldcontain" class="ui-hide-label">
-        			<label for="username">Username:</label>
-        			<input type="text" name="username" id="username" value="" placeholder="Username" /><br>
-        			<span class="error"> <?php echo $usernameErr;?></span>
-        		</div>
-        		<div data-role="fieldcontain" class="ui-hide-label">
-        			<label for="password">Password:</label>
-        			<input type="password" name="password" id="password" value="" placeholder="Password" /><br>
-        			<span class="error"> <?php echo $passErr; ?></span>
-        		</div>
-        		<button id="submitButton" type="submit" data-theme="c">Submit</button>
-        		</form>
+        	<div data-role="content">
+    			<a href="#index" class="ui-btn ui-btn-inline ui-corner-all ui-mini" data-rel="back">Back</a>
         	</div>
-        </div>
-        <!--end of loginArea-->
+        	<div data-role="footer" data-position="fixed">		
+				<h3> Footer Content </h3>
+			</div><!-- /footer -->
+    	</div>
+    	<!--end of page-->
+    <script>
+	</script>
     </body>
 </html>

@@ -18,21 +18,38 @@
 		<link rel="stylesheet" type="text/css" href="css/index.css" />
     </head>
     <body>
-    	<header data-role="navbar" class="ui-header"  data-theme="a">
+    	<header data-role="navbar" class="ui-header"  data-theme="c">
         	<a href="#mypanel" class="ui-btn-left" id="mygrid" data-role="button" data-icon="grid" data-inline="true" data-iconpos="center"></a>
-        	<a href="#" class="ui-btn-right" data-icon="search" data-role="button" data-inline="true" data-iconpos="center"></a>
+        	<a href="" class="ui-btn-right" data-icon="search" data-role="button" data-inline="true" data-iconpos="center"></a>
     	</header>
         	<!--/header-->
         <div data-role="panel" id="mypanel">
         	<ul>
         		<li><a href="index.html" rel="external" data-role="button">Home</a></li>
-        		<li><a href="loginPage.html" rel="external" data-role ="button">Login</a></li>
-        		<li><a href="locations.html" rel="external" data-role ="button">Locations</a></li>
+				<li><a href="locations.html" rel="external" data-role ="button">Locations</a></li>
+        		<li><a href="settings.html" rel="external" data-role ="button">Settings</a></li>
         	</ul>
         </div>
         	<!--/panel-->
         <div data-role="content">
+        	<div id="loginArea"> 
+        		<h2> Login: </h2>
+        		<form id="loginForm" action="auth.php" method="PUT" data-ajax="false"> 
+        		<div data-role="fieldcontain" class="ui-hide-label">
+        			<label for="username">Username:</label>
+        			<input type="text" name="username" id="username" value="" placeholder="Username" /><br>
+        			<span class="error"> <?php echo $usernameErr;?></span>
+        		</div>
+        		<div data-role="fieldcontain" class="ui-hide-label">
+        			<label for="password">Password:</label>
+        			<input type="password" name="password" id="password" value="" placeholder="Password" /><br>
+        			<span class="error"> <?php echo $passErr; ?></span>
+        		</div>
+        		<button id="submitButton" type="submit" data-theme="c">Submit</button>
+        		</form>
+        	</div>
         </div>
+        <!--end of loginArea-->
 	<script type="text/javascript" src="phonegap.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
     <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>

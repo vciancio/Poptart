@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" class="ui-mobile">
+    <head>
+        <meta name="format-detection" content="telephone=no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+		<meta name="viewport" content="height=device-height,width=device-width,initial-scale=1.0,maximum-scale=1.0" >       
+ 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="author" content="ChristineRohacz">
+		<meta charset="utf-8" />
+		<title>Poptart</title>
+<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+		
+		<link rel="stylesheet" type="text/css" href="css/jquery.mobile.flatui.css">
+    	<link rel="stylesheet" type="text/css" href="css/index.css">
+    	<script type="text/javascript" src="phonegap.js"></script>
+    	<script type="text/javascript" src="js/index.js"></script>
+    	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+    	<style>
+
+    	</style>
+    </head>
+    <body>
+    	<div data-role="page" id="index" data-dom-cache="true" data-theme="a">
+    		<!--All header and footer divs must have the same data id so that the bars will appear fixed
+    		outside of transition -->
+    		<div data-role="header" class="ui-header ui-bar-a">
+    			<a href="/" rel="external" data-role="button" data-icon="flat-menu" data-iconpos="notext" data-theme="c" data-inline="true">Menu</a>
+    			<h1> Login</h1>
+				<a href="/settings.html" rel="external" data-role="button" data-icon="flat-settings" data-iconpos="notext" data-theme="c" data-inline="true">Settings</a>     		
+			</div><!--/header-->
+        <div data-role="content">
+        	<div id="loginArea"> 
+        		<h2> Login: </h2>
+        		<form id="loginForm" action="auth.php" method="PUT" data-ajax="false"> 
+        		<div data-role="fieldcontain" class="ui-hide-label">
+        			<label for="username">Username:</label>
+        			<input type="text" name="username" id="username" value="" placeholder="Username" /><br>
+        			<span class="error"> <?php echo $usernameErr;?></span>
+        		</div>
+        		<div data-role="fieldcontain" class="ui-hide-label">
+        			<label for="password">Password:</label>
+        			<input type="password" name="password" id="password" value="" placeholder="Password" /><br>
+        			<span class="error"> <?php echo $passErr; ?></span>
+        		</div>
+        		<button id="submitButton" type="submit" data-theme="c">Submit</button>
+        		</form>
+        	</div>
+        </div>
+        <!--end of loginArea-->
+    </body>
+</html>

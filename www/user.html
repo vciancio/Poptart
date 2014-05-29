@@ -20,44 +20,24 @@
 
     	</style>
     </head>
-   <body>
+    <body>
     	<div data-role="page" id="index" data-dom-cache="true" data-theme="a">
     		<!--All header and footer divs must have the same data id so that the bars will appear fixed
     		outside of transition -->
     		<div data-role="header" class="ui-header ui-bar-a">
     			<a href="/" rel="external" data-role="button" data-icon="flat-menu" data-iconpos="notext" data-theme="c" data-inline="true">Menu</a>
-    			<h1> Home </h1>
+    			<h1> User Profile</h1>
 				<a href="/settings.html" rel="external" data-role="button" data-icon="flat-settings" data-iconpos="notext" data-theme="c" data-inline="true">Settings</a>     		
 			</div><!--/header-->
-        	
-        	<div data-role="content" role="main">
-        	<div id="main-menu">
-    			<fieldset class="ui-grid-a blocks-a">
-    				<div class="ui-block-a" id="block1"><a href="locations.html" rel="external" data-role="button" data-icon="flat-location" data-theme="a" role="button">Local Health Centers</a></div>
-					<div class="ui-block-b" id="block2"><a href="medhist.html" rel="external" data-role="button" data-icon="flat-new" data-theme="a" role="button">Medical History</a></div>
-				</fieldset>
-				<fieldset class="ui-grid-a blocks-a">
-					<div class="ui-block-a" id="block3"><a href="user.html" rel="external" data-role="button" data-icon="flat-man" data-theme="a" role="button">User Profile</a></div>
-					<div class="ui-block-b" id="block2"><a href="#" data-role="button" data-icon="flat-plus" data-theme="a" role="button">New Page</a></div>
-    			</fieldset> <!--/fieldset-->
-        	</div><!--/main-menu-->
-        	</div><!--/content-->
-        	<div data-role="footer" data-position="fixed" data-theme="c">		
+        	<div data-role="content">
+    			<a href="#index" class="ui-btn ui-btn-inline ui-corner-all ui-mini" data-rel="back">Back</a>
+        	</div>
+        	<div data-role="footer" data-position="fixed">		
 				<h3> Footer Content </h3>
 			</div><!-- /footer -->
-    	</div><!--/page-->
-	<script type="text/javascript" src="phonegap.js"></script>
-    <script type="text/javascript" src="js/index.js"></script>
-    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-	<script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
-    <script type="text/javascript" src="js/jquery.ui.map.js"></script>
-	<script type="text/javascript" src="js/jquery.ui.map.extensions.js"></script>
+    	</div>
+    	<!--end of page-->
     <script>
-    	$(document).bind("mobileinit", function(){
-  			//set configurations here
-  			$.mobile.pageLoadErrorMessage= "Sorry, we couldn't get that page for you";
-		});
 	</script>
     </body>
 </html>

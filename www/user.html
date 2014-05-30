@@ -5,36 +5,37 @@
         <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
         <meta name="viewport" content="height=device-height,width=device-width,initial-scale=1.0,maximum-scale=1.0" >
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<meta name="author" content="ChristineRohacz">
-		<meta charset="utf-8" />
-		<title>Poptart</title>
+	<meta name="author" content="ChristineRohacz">
+	<meta charset="utf-8" />
+	<title>Poptart</title>
 <!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
 		
-		<link rel="stylesheet" type="text/css" href="css/jquery.mobile.flatui.css">
+	<link rel="stylesheet" type="text/css" href="css/jquery.mobile.flatui.css">
     	<link rel="stylesheet" type="text/css" href="css/index.css">
     	<script type="text/javascript" src="phonegap.js"></script>
     	<script type="text/javascript" src="js/index.js"></script>
-    	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-		<script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+    	<script type="text/javascript" src="js/cordova.js"></script>
+    	<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.2.1/jquery.mobile-1.2.1.min.js"></script>
     	<style>
 
     	</style>
     </head>
     <body>
-    	<div data-role="page" id="index" data-dom-cache="true" data-theme="a">
+    	<div data-role="page" id="user" data-dom-cache="true" data-theme="a">
     		<!--All header and footer divs must have the same data id so that the bars will appear fixed
     		outside of transition -->
     		<div data-role="header" class="ui-header ui-bar-a">
-    			<a href="/" rel="external" data-role="button" data-icon="flat-menu" data-iconpos="notext" data-theme="c" data-inline="true">Menu</a>
-    			<h1> User Profile</h1>
-				<a href="/settings.html" rel="external" data-role="button" data-icon="flat-settings" data-iconpos="notext" data-theme="c" data-inline="true">Settings</a>     		
+    			<a href="index.html" rel="external" data-role="button" data-icon="flat-menu" data-iconpos="notext" data-theme="c" data-inline="true"></a>
+    				<h1> User Profile</h1>
+			<a href="settings.html" rel="external" data-role="button" data-icon="flat-settings" data-iconpos="notext" data-theme="c" data-inline="true"></a>     		
 			</div><!--/header-->
         	<div data-role="content">
     			<a href="#index" class="ui-btn ui-btn-inline ui-corner-all ui-mini" data-rel="back">Back</a>
         	</div>
         	<div data-role="footer" data-position="fixed">		
 				<h3> Footer Content </h3>
-			</div><!-- /footer -->
+		</div><!-- /footer -->
     	</div>
     	<!--end of page-->
     <script>

@@ -1,4 +1,4 @@
-
+/*
 $(document).ready(function() { 
 	$("#login_submit").click(function(event) {
 		event.preventDefault(); 
@@ -60,4 +60,4 @@ function showError(error)
     }
   }
   
-  
+ */

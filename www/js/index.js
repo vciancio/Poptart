@@ -27,7 +27,6 @@ $('#loginForm').submit(function(e) {
 	jQuery.support.cors=true;
 	$.ajax({
 		url:
-		crossDomain: true;
 		type='post',
 		data= $("#loginForm").serialize(), 
 		success: function(data) { 

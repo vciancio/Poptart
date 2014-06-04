@@ -1,1 +1,12 @@
-/
+#map-list { 
+	display: inline;
+	position: relative;
+	top: 200px;
+	left: 620px;
+	
+}
+
+#mapcontainer{
+	height: 400px;
+	width: 600px;
+}

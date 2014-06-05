@@ -11,7 +11,7 @@ $.ajax({
         console.log(object);
         $.each( object, function(key, val){
           items.push("<li class=ui-li id='" + key + "'>" + key + ": " + val + "</li>");
-          success(object); 
+          //success(object); 
         });
      });
      $("<ul/>", {
@@ -25,7 +25,7 @@ $.ajax({
   }
 });
 
-
+/*
 //custom google maps function
 function success(position) {
   	
@@ -47,6 +47,14 @@ function success(position) {
       		map: map,
       		title: "marker" 
   		});
+  		
+  		var infowindow = new google.maps.InfoWindow({
+  			content: position.name
+  		}); 
+  		
+  		google.maps.event.addListener(marker, 'click',function() { 
+  			infowindow.open(map,marker); 
+  		}); 
   } //end function success 
 
 if (navigator.geolocation) {
@@ -55,64 +63,19 @@ if (navigator.geolocation) {
   		error('Geo Location is not supported');
 }
 
-google.maps.event.addDomListener(window, 'load', success);
+google.maps.event.addDomListener(window, 'load', success); */
 
-//default google maps function
-/*function success(position) {
-  							var mapcanvas = document.createElement('div');
-  							mapcanvas.id = 'mapcontainer';
-  							mapcanvas.style.height = '400px';
-  							mapcanvas.style.width = '600px';
 
-  							document.querySelector('article').appendChild(mapcanvas);
-
-  							var coords = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
-  							var cowell = new google.maps.LatLng(37.348169,-121.935693);
-  							
-  							var options = {
-    							zoom: 15,
-    							center: coords,
-    							mapTypeControl: false,
-    							navigationControlOptions: {
-    								style: google.maps.NavigationControlStyle.SMALL
-    							},
-    							mapTypeId: google.maps.MapTypeId.ROADMAP
-  							};
-  							var map = new google.maps.Map(document.getElementById("mapcontainer"), options);
-
-							var coords = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
-  							var marker = new google.maps.Marker({
-      							position: coords,
-      							map: map,
-      							title:"You are here!"
-  							});
-  							
-  							var infowindow2 = new google.maps.InfoWindow({ 
-  								content: '<div> <h1> Here! </h1></div>'
-  							});
-  							
-  							google.maps.event.addListener(marker,'click',function() { 
-  								infowindow2.open(map,marker); 
-  							}); 
-  							
-  							var cowell = new google.maps.LatLng(37.348169,-121.935693);
-  							var marker2 = new google.maps.Marker({
-  								position: cowell,
-  								map: map,
-  								title: "Cowell"
-  							}); 
-  							
-  							var infowindow = new google.maps.InfoWindow({
-  								content: '<div> <h1> Cowell Health Center</h1></div>'
-  							});
-  							
-  							google.maps.event.addListener(marker2,'click',function() { 
-  								infowindow.open(map,marker2); 
-  							}); 
-						} //end function success 
-
-						if (navigator.geolocation) {
-  							navigator.geolocation.getCurrentPosition(success);
-						} else {
-  							error('Geo Location is not supported');
-						}*/
+//jQuery mobile maps  
+	$(document).on('pageshow','[data-role=page]',function(){   
+		var mapOptions = {zoom: 5, center: new google.maps.LatLng(34,32), mapTypeId: google.maps.MapTypeId.ROADMAP};
+		var map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
+		var myMarker1 = new google.maps.Marker({position: new google.maps.LatLng(29.979175, 31.134358), map: map });
+		var myMarker2 = new google.maps.Marker({position: new google.maps.LatLng(32.483333, 44.433333), map: map });
+		var myMarker3 = new google.maps.Marker({position: new google.maps.LatLng(37.95, 27.366667), map: map });
+		var myMarker4 = new google.maps.Marker({position: new google.maps.LatLng(37.638, 21.63), map: map });
+		var myMarker5 = new google.maps.Marker({position: new google.maps.LatLng(37.033333, 27.433333), map: map });
+		var myMarker4 = new google.maps.Marker({position: new google.maps.LatLng(36.433333, 28.216667), map: map });
+		var myMarker5 = new google.maps.Marker({position: new google.maps.LatLng(31.213931, 29.885661), map: map });
+});
+ 

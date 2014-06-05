@@ -21,7 +21,7 @@ $.ajax({
         "id":"map-list",
         "data-theme": "b",
         html: items.join("")
-     }).appendTo("body");
+     })//.appendTo("body");
   }
 });
 

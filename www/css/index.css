@@ -6,18 +6,12 @@
 	
 }
 
-#map-page, #map-canvas{
+#map-page, #mapcontainer{
 	width:100%;
 	height:100%;
 	padding:0;
 }
 
-
-html, body, #map_canvas {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-}
 #content { 
     padding: 0;
     position : absolute !important; 

@@ -7,16 +7,15 @@ html, body {
 
 #mapcontainer{
 	width:100%;
-	height:350px;
+	height:100%;
 	padding:0;
     text-shadow: none;
 }
 
 #map-content { 
-    padding: 0px;
+    padding: 151515151515151515151515151515px;
     width: 100%;
-    height 100%;
-    overflow: hidden;
+    height 80%;
 }
 
 #map-page { 

@@ -1,13 +1,32 @@
+function throttle_events(event) {
+    var now = new Date();
+    var distance = Math.sqrt(Math.pow(event.clientX - last.x, 2) + Math.pow(event.clientY - last.y, 2));
+    var time = now.getTime() - last.time.getTime();
+    if (distance * time < space * period) {    //event arrived too soon or mouse moved too little or both
+        console.log("event stopped");
+        if (event.stopPropagation) { // W3C/addEventListener()
+            event.stopPropagation();
+        } else { // Older IE.
+            event.cancelBubble = true;
+        };
+    } else {
+        console.log("event allowed: " + now.getTime());
+        last.time = now;
+        last.x    = event.clientX;
+        last.y    = event.clientY;
+    };
+};
+
 //custom google maps function
 function success(position) {
-  var coords = new google.maps.LatLng(position.latitude, position.longitude); 
+  var coords = new google.maps.LatLng(position.latitude, position.longitude);
   var options = {
-    zoom: 10,
+    zoom: 8,
     center: coords,
     mapTypeControl: false,
-    navigationControlOptions: {
+/*    navigationControlOptions: {
       style: google.maps.NavigationControlStyle.SMALL
-    },
+    },*/
     mapTypeId: google.maps.MapTypeId.ROADMAP
   };
 
@@ -17,6 +36,7 @@ function success(position) {
     map: map,
     title: "marker"
   });
+  map.addEventListener("mousemove", throttle_events, true);
 } //end function success 
 
 if (navigator.geolocation) {
@@ -52,5 +72,3 @@ $.ajax({
     },500);
   }
 });
-
-//google.maps.event.addDomListener(window, 'load', success);

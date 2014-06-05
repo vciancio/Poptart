@@ -47,6 +47,9 @@ $.ajax({
         "data-theme": "b",
         html: items.join("")
      });//.appendTo("body");
+    setTimeout(function() {
+      google.maps.event.trigger(map, 'resize');
+    },500);
   }
 });
 

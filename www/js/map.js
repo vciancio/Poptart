@@ -24,9 +24,9 @@ function success(position) {
     zoom: 8,
     center: coords,
     mapTypeControl: false,
-/*    navigationControlOptions: {
+    navigationControlOptions: {
       style: google.maps.NavigationControlStyle.SMALL
-    },*/
+    },
     mapTypeId: google.maps.MapTypeId.ROADMAP
   };
 

@@ -39,3 +39,8 @@ html, body {
 	right: 0px;
 	
 }
+
+#block1 { 
+	overflow: hidden; 
+	text-overflow: hidden;
+}

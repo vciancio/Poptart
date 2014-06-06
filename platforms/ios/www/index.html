@@ -30,12 +30,12 @@
         	<div data-role="content" role="main">
         	<div id="main-menu">
     			<fieldset class="ui-grid-a blocks-a">
-    				<div class="ui-block-a" id="block1"><a href="locations.html" rel="external" data-role="button" data-icon="flat-location" data-theme="a" role="button">Local Health Centers</a></div>
-					<div class="ui-block-b" id="block2"><a href="medhist.html" rel="external" data-role="button" data-icon="flat-new" data-theme="a" role="button">Medical History</a></div>
+    				<div class="ui-block-a" id="block1"><a href="locations.html" id="block1-text" rel="external" data-role="button" data-icon="flat-location" data-theme="a" role="button"><span style="display:block; " >Local Health Centers</span></a></div>
+					<div class="ui-block-b" id="block2"><a href="medhist.html" rel="external" data-role="button" data-icon="flat-new" data-theme="a" role="button"><span>Medical History</span></a></div>
 				</fieldset>
 				<fieldset class="ui-grid-a blocks-a">
-					<div class="ui-block-a" id="block3"><a href="user.html" rel="external" data-role="button" data-icon="flat-man" data-theme="a" role="button">User Profile</a></div>
-					<div class="ui-block-b" id="block2"><a href="settings.html" data-role="button" data-icon="flat-plus" data-theme="a" role="button">New Page</a></div>
+					<div class="ui-block-a" id="block3"><a href="user.html" rel="external" data-role="button" data-icon="flat-man" data-theme="a" role="button"><span>User Profile</span></a></div>
+					<div class="ui-block-b" id="block2"><a href="settings.html" data-role="button" data-icon="flat-plus" data-theme="a" role="button"><span>New Page</span></a></div>
     			</fieldset> <!--/fieldset-->
         	</div><!--/main-menu-->
         	</div><!--/content-->
@@ -49,10 +49,12 @@
   			//set configurations here
   			$.mobile.pageLoadErrorMessage= "Sorry, we couldn't get that page for you";
 		});
-		
-		$(document).on('pageshow', "div[data-role='page']", function () {
-    		$(window).trigger('resize');
-		});
+
+		$(function() {
+    		while( $('#block1-text').height() > $('#block1').height() ) {
+        $('#block1-text').css('font-size', (parseInt($('#block1-text').css('font-size')) - 1) + "px" );
+    }
+});
 	</script>
     </body>
 </html>

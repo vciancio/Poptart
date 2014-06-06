@@ -39,3 +39,7 @@ html, body {
 	right: 0px;
 	
 }
+
+#block1 { 
+	display: block;
+}

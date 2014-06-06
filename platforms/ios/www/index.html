@@ -30,8 +30,8 @@
         	<div data-role="content" role="main">
         	<div id="main-menu">
     			<fieldset class="ui-grid-a blocks-a">
-    				<div class="ui-block-a" id="block1"><a href="locations.html" id="block1-text" rel="external" data-role="button" data-icon="flat-location" data-theme="a" role="button"><span style="display:block; " >Local Health Centers</span></a></div>
-					<div class="ui-block-b" id="block2"><a href="medhist.html" rel="external" data-role="button" data-icon="flat-new" data-theme="a" role="button"><span>Medical History</span></a></div>
+    				<div class="ui-block-a" id="block1"><a href="locations.html" id="block1-text" rel="external" data-role="button" data-icon="flat-location" data-theme="a" role="button"><span>Local Health Centers</span></a></div>
+					<div class="ui-block-b" id="block2"><a href="medhist.html" rel="external" data-role="button" data-icon="flat-new" data-theme="a" role="button"><span>Medical History </span></a></div>
 				</fieldset>
 				<fieldset class="ui-grid-a blocks-a">
 					<div class="ui-block-a" id="block3"><a href="user.html" rel="external" data-role="button" data-icon="flat-man" data-theme="a" role="button"><span>User Profile</span></a></div>
@@ -49,12 +49,6 @@
   			//set configurations here
   			$.mobile.pageLoadErrorMessage= "Sorry, we couldn't get that page for you";
 		});
-
-		$(function() {
-    		while( $('#block1-text').height() > $('#block1').height() ) {
-        $('#block1-text').css('font-size', (parseInt($('#block1-text').css('font-size')) - 1) + "px" );
-    }
-});
 	</script>
     </body>
 </html>

@@ -1,0 +1,353 @@
+2014-06-04 20:08:30.227 Poptart[41164:70b] Multi-tasking -> Device: YES, App: YES
+2014-06-04 20:08:30.312 Poptart[41164:70b] Unlimited access to network resources
+2014-06-04 20:08:31.189 Poptart[41164:70b] Resetting plugins due to page load.
+2014-06-04 20:08:31.309 Poptart[41164:70b] ERROR: Plugin 'Device' not found, or is not a CDVPlugin. Check your plugin mapping in config.xml.
+2014-06-04 20:08:31.310 Poptart[41164:70b] -[CDVCommandQueue executePending] [Line 158] FAILED pluginJSON = [
+  "Device790763566",
+  "Device",
+  "getDeviceInfo",
+  [
+
+  ]
+]
+2014-06-04 20:08:31.310 Poptart[41164:70b] ERROR: Plugin 'NetworkStatus' not found, or is not a CDVPlugin. Check your plugin mapping in config.xml.
+2014-06-04 20:08:31.310 Poptart[41164:70b] -[CDVCommandQueue executePending] [Line 158] FAILED pluginJSON = [
+  "NetworkStatus790763567",
+  "NetworkStatus",
+  "getConnectionInfo",
+  [
+
+  ]
+]
+2014-06-04 20:08:31.529 Poptart[41164:70b] Finished load of: file:///Users/crohacz/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/2164C606-A19D-4980-9B32-EEB1593F2C50/Poptart.app/www/index.html
+2014-06-04 20:08:36.288 Poptart[41164:70b] ERROR: Plugin 'Logger' not found, or is not a CDVPlugin. Check your plugin mapping in config.xml.
+2014-06-04 20:08:36.289 Poptart[41164:70b] -[CDVCommandQueue executePending] [Line 158] FAILED pluginJSON = [
+  "INVALID",
+  "Logger",
+  "logLevel",
+  [
+    "LOG",
+    "deviceready has not fired after 5 seconds."
+  ]
+]
+2014-06-04 20:08:36.289 Poptart[41164:70b] ERROR: Plugin 'Logger' not found, or is not a CDVPlugin. Check your plugin mapping in config.xml.
+2014-06-04 20:08:36.290 Poptart[41164:70b] -[CDVCommandQueue executePending] [Line 158] FAILED pluginJSON = [
+  "INVALID",
+  "Logger",
+  "logLevel",
+  [
+    "LOG",
+    "Channel not fired: onCordovaConnectionReady"
+  ]
+]
+2014-06-04 20:08:36.290 Poptart[41164:70b] ERROR: Plugin 'Logger' not found, or is not a CDVPlugin. Check your plugin mapping in config.xml.
+2014-06-04 20:08:36.290 Poptart[41164:70b] -[CDVCommandQueue executePending] [Line 158] FAILED pluginJSON = [
+  "INVALID",
+  "Logger",
+  "logLevel",
+  [
+    "LOG",
+    "Channel not fired: onCordovaInfoReady"
+  ]
+]
+2014-06-04 20:11:14.013 Poptart[41555:70b] Multi-tasking -> Device: YES, App: YES
+2014-06-04 20:11:14.021 Poptart[41555:70b] Unlimited access to network resources
+2014-06-04 20:11:14.078 Poptart[41555:70b] Resetting plugins due to page load.
+2014-06-04 20:11:14.126 Poptart[41555:70b] ERROR: Plugin 'Device' not found, or is not a CDVPlugin. Check your plugin mapping in config.xml.
+2014-06-04 20:11:14.127 Poptart[41555:70b] -[CDVCommandQueue executePending] [Line 158] FAILED pluginJSON = [
+  "Device1236709108",
+  "Device",
+  "getDeviceInfo",
+  [
+
+  ]
+]
+2014-06-04 20:11:14.127 Poptart[41555:70b] ERROR: Plugin 'NetworkStatus' not found, or is not a CDVPlugin. Check your plugin mapping in config.xml.
+2014-06-04 20:11:14.127 Poptart[41555:70b] -[CDVCommandQueue executePending] [Line 158] FAILED pluginJSON = [
+  "NetworkStatus1236709109",
+  "NetworkStatus",
+  "getConnectionInfo",
+  [
+
+  ]
+]
+2014-06-04 20:11:14.297 Poptart[41555:70b] Finished load of: file:///Users/crohacz/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/2164C606-A19D-4980-9B32-EEB1593F2C50/Poptart.app/www/index.html
+2014-06-04 20:11:19.119 Poptart[41555:70b] ERROR: Plugin 'Logger' not found, or is not a CDVPlugin. Check your plugin mapping in config.xml.
+2014-06-04 20:11:19.120 Poptart[41555:70b] -[CDVCommandQueue executePending] [Line 158] FAILED pluginJSON = [
+  "INVALID",
+  "Logger",
+  "logLevel",
+  [
+    "LOG",
+    "deviceready has not fired after 5 seconds."
+  ]
+]
+2014-06-04 20:11:19.120 Poptart[41555:70b] ERROR: Plugin 'Logger' not found, or is not a CDVPlugin. Check your plugin mapping in config.xml.
+2014-06-04 20:11:19.120 Poptart[41555:70b] -[CDVCommandQueue executePending] [Line 158] FAILED pluginJSON = [
+  "INVALID",
+  "Logger",
+  "logLevel",
+  [
+    "LOG",
+    "Channel not fired: onCordovaConnectionReady"
+  ]
+]
+2014-06-04 20:11:19.121 Poptart[41555:70b] ERROR: Plugin 'Logger' not found, or is not a CDVPlugin. Check your plugin mapping in config.xml.
+2014-06-04 20:11:19.121 Poptart[41555:70b] -[CDVCommandQueue executePending] [Line 158] FAILED pluginJSON = [
+  "INVALID",
+  "Logger",
+  "logLevel",
+  [
+    "LOG",
+    "Channel not fired: onCordovaInfoReady"
+  ]
+]
+2014-06-04 20:17:10.942 Poptart[42461:70b] Multi-tasking -> Device: YES, App: YES
+2014-06-04 20:17:10.954 Poptart[42461:70b] Unlimited access to network resources
+2014-06-04 20:17:11.235 Poptart[42461:70b] Resetting plugins due to page load.
+2014-06-04 20:17:11.470 Poptart[42461:70b] ERROR: Plugin 'Device' not found, or is not a CDVPlugin. Check your plugin mapping in config.xml.
+2014-06-04 20:17:11.471 Poptart[42461:70b] -[CDVCommandQueue executePending] [Line 158] FAILED pluginJSON = [
+  "Device846551834",
+  "Device",
+  "getDeviceInfo",
+  [
+
+  ]
+]
+2014-06-04 20:17:11.471 Poptart[42461:70b] ERROR: Plugin 'NetworkStatus' not found, or is not a CDVPlugin. Check your plugin mapping in config.xml.
+2014-06-04 20:17:11.471 Poptart[42461:70b] -[CDVCommandQueue executePending] [Line 158] FAILED pluginJSON = [
+  "NetworkStatus846551835",
+  "NetworkStatus",
+  "getConnectionInfo",
+  [
+
+  ]
+]
+2014-06-04 20:17:11.730 Poptart[42461:70b] Finished load of: file:///Users/crohacz/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/2164C606-A19D-4980-9B32-EEB1593F2C50/Poptart.app/www/index.html
+2014-06-04 20:17:16.447 Poptart[42461:70b] ERROR: Plugin 'Logger' not found, or is not a CDVPlugin. Check your plugin mapping in config.xml.
+2014-06-04 20:17:16.447 Poptart[42461:70b] -[CDVCommandQueue executePending] [Line 158] FAILED pluginJSON = [
+  "INVALID",
+  "Logger",
+  "logLevel",
+  [
+    "LOG",
+    "deviceready has not fired after 5 seconds."
+  ]
+]
+2014-06-04 20:17:16.448 Poptart[42461:70b] ERROR: Plugin 'Logger' not found, or is not a CDVPlugin. Check your plugin mapping in config.xml.
+2014-06-04 20:17:16.448 Poptart[42461:70b] -[CDVCommandQueue executePending] [Line 158] FAILED pluginJSON = [
+  "INVALID",
+  "Logger",
+  "logLevel",
+  [
+    "LOG",
+    "Channel not fired: onCordovaConnectionReady"
+  ]
+]
+2014-06-04 20:17:16.448 Poptart[42461:70b] ERROR: Plugin 'Logger' not found, or is not a CDVPlugin. Check your plugin mapping in config.xml.
+2014-06-04 20:17:16.449 Poptart[42461:70b] -[CDVCommandQueue executePending] [Line 158] FAILED pluginJSON = [
+  "INVALID",
+  "Logger",
+  "logLevel",
+  [
+    "LOG",
+    "Channel not fired: onCordovaInfoReady"
+  ]
+]
+2014-06-04 20:17:19.831 Poptart[42461:70b] Resetting plugins due to page load.
+2014-06-04 20:17:19.912 Poptart[42461:70b] Finished load of: file:///Users/crohacz/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/2164C606-A19D-4980-9B32-EEB1593F2C50/Poptart.app/www/index.html
+2014-06-04 20:17:19.919 Poptart[42461:70b] ERROR: Plugin 'Device' not found, or is not a CDVPlugin. Check your plugin mapping in config.xml.
+2014-06-04 20:17:19.920 Poptart[42461:70b] -[CDVCommandQueue executePending] [Line 158] FAILED pluginJSON = [
+  "Device1958347502",
+  "Device",
+  "getDeviceInfo",
+  [
+
+  ]
+]
+2014-06-04 20:17:19.920 Poptart[42461:70b] ERROR: Plugin 'NetworkStatus' not found, or is not a CDVPlugin. Check your plugin mapping in config.xml.
+2014-06-04 20:17:19.920 Poptart[42461:70b] -[CDVCommandQueue executePending] [Line 158] FAILED pluginJSON = [
+  "NetworkStatus1958347503",
+  "NetworkStatus",
+  "getConnectionInfo",
+  [
+
+  ]
+]
+2014-06-04 20:17:20.873 Poptart[42461:70b] Resetting plugins due to page load.
+2014-06-04 20:17:21.208 Poptart[42461:70b] Finished load of: file:///Users/crohacz/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/2164C606-A19D-4980-9B32-EEB1593F2C50/Poptart.app/www/locations.html
+Terminating in response to SpringBoard's termination.
+2014-06-06 12:40:41.171 Poptart[49585:70b] Multi-tasking -> Device: YES, App: YES
+2014-06-06 12:40:41.220 Poptart[49585:70b] Unlimited access to network resources
+2014-06-06 12:40:41.616 Poptart[49585:70b] Resetting plugins due to page load.
+2014-06-06 12:40:42.115 Poptart[49585:70b] ERROR: Plugin 'Device' not found, or is not a CDVPlugin. Check your plugin mapping in config.xml.
+2014-06-06 12:40:42.116 Poptart[49585:70b] -[CDVCommandQueue executePending] [Line 158] FAILED pluginJSON = [
+  "Device1133957835",
+  "Device",
+  "getDeviceInfo",
+  [
+
+  ]
+]
+2014-06-06 12:40:42.118 Poptart[49585:70b] ERROR: Plugin 'NetworkStatus' not found, or is not a CDVPlugin. Check your plugin mapping in config.xml.
+2014-06-06 12:40:42.118 Poptart[49585:70b] -[CDVCommandQueue executePending] [Line 158] FAILED pluginJSON = [
+  "NetworkStatus1133957836",
+  "NetworkStatus",
+  "getConnectionInfo",
+  [
+
+  ]
+]
+2014-06-06 12:40:42.137 Poptart[49585:70b] Finished load of: file:///Users/crohacz/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/2164C606-A19D-4980-9B32-EEB1593F2C50/Poptart.app/www/index.html
+2014-06-06 12:40:46.890 Poptart[49585:70b] ERROR: Plugin 'Logger' not found, or is not a CDVPlugin. Check your plugin mapping in config.xml.
+2014-06-06 12:40:46.890 Poptart[49585:70b] -[CDVCommandQueue executePending] [Line 158] FAILED pluginJSON = [
+  "INVALID",
+  "Logger",
+  "logLevel",
+  [
+    "LOG",
+    "deviceready has not fired after 5 seconds."
+  ]
+]
+2014-06-06 12:40:46.890 Poptart[49585:70b] ERROR: Plugin 'Logger' not found, or is not a CDVPlugin. Check your plugin mapping in config.xml.
+2014-06-06 12:40:46.891 Poptart[49585:70b] -[CDVCommandQueue executePending] [Line 158] FAILED pluginJSON = [
+  "INVALID",
+  "Logger",
+  "logLevel",
+  [
+    "LOG",
+    "Channel not fired: onCordovaConnectionReady"
+  ]
+]
+2014-06-06 12:40:46.891 Poptart[49585:70b] ERROR: Plugin 'Logger' not found, or is not a CDVPlugin. Check your plugin mapping in config.xml.
+2014-06-06 12:40:46.891 Poptart[49585:70b] -[CDVCommandQueue executePending] [Line 158] FAILED pluginJSON = [
+  "INVALID",
+  "Logger",
+  "logLevel",
+  [
+    "LOG",
+    "Channel not fired: onCordovaInfoReady"
+  ]
+]
+2014-06-06 13:06:06.295 Poptart[49585:70b] Resetting plugins due to page load.
+2014-06-06 13:06:06.605 Poptart[49585:70b] Finished load of: file:///Users/crohacz/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/2164C606-A19D-4980-9B32-EEB1593F2C50/Poptart.app/www/locations.html
+2014-06-06 13:10:07.395 Poptart[50356:70b] Multi-tasking -> Device: YES, App: YES
+2014-06-06 13:10:07.409 Poptart[50356:70b] Unlimited access to network resources
+2014-06-06 13:10:07.666 Poptart[50356:70b] Resetting plugins due to page load.
+2014-06-06 13:10:07.902 Poptart[50356:70b] ERROR: Plugin 'Device' not found, or is not a CDVPlugin. Check your plugin mapping in config.xml.
+2014-06-06 13:10:07.903 Poptart[50356:70b] -[CDVCommandQueue executePending] [Line 158] FAILED pluginJSON = [
+  "Device1924226214",
+  "Device",
+  "getDeviceInfo",
+  [
+
+  ]
+]
+2014-06-06 13:10:07.904 Poptart[50356:70b] ERROR: Plugin 'NetworkStatus' not found, or is not a CDVPlugin. Check your plugin mapping in config.xml.
+2014-06-06 13:10:07.904 Poptart[50356:70b] -[CDVCommandQueue executePending] [Line 158] FAILED pluginJSON = [
+  "NetworkStatus1924226215",
+  "NetworkStatus",
+  "getConnectionInfo",
+  [
+
+  ]
+]
+2014-06-06 13:10:08.163 Poptart[50356:70b] Finished load of: file:///Users/crohacz/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/2164C606-A19D-4980-9B32-EEB1593F2C50/Poptart.app/www/index.html
+2014-06-06 13:10:12.882 Poptart[50356:70b] ERROR: Plugin 'Logger' not found, or is not a CDVPlugin. Check your plugin mapping in config.xml.
+2014-06-06 13:10:12.882 Poptart[50356:70b] -[CDVCommandQueue executePending] [Line 158] FAILED pluginJSON = [
+  "INVALID",
+  "Logger",
+  "logLevel",
+  [
+    "LOG",
+    "deviceready has not fired after 5 seconds."
+  ]
+]
+2014-06-06 13:10:12.883 Poptart[50356:70b] ERROR: Plugin 'Logger' not found, or is not a CDVPlugin. Check your plugin mapping in config.xml.
+2014-06-06 13:10:12.883 Poptart[50356:70b] -[CDVCommandQueue executePending] [Line 158] FAILED pluginJSON = [
+  "INVALID",
+  "Logger",
+  "logLevel",
+  [
+    "LOG",
+    "Channel not fired: onCordovaConnectionReady"
+  ]
+]
+2014-06-06 13:10:12.883 Poptart[50356:70b] ERROR: Plugin 'Logger' not found, or is not a CDVPlugin. Check your plugin mapping in config.xml.
+2014-06-06 13:10:12.884 Poptart[50356:70b] -[CDVCommandQueue executePending] [Line 158] FAILED pluginJSON = [
+  "INVALID",
+  "Logger",
+  "logLevel",
+  [
+    "LOG",
+    "Channel not fired: onCordovaInfoReady"
+  ]
+]
+2014-06-06 13:10:19.392 Poptart[50356:70b] Resetting plugins due to page load.
+2014-06-06 13:10:19.705 Poptart[50356:70b] Finished load of: file:///Users/crohacz/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/2164C606-A19D-4980-9B32-EEB1593F2C50/Poptart.app/www/locations.html
+2014-06-06 13:10:26.370 Poptart[50356:70b] Resetting plugins due to page load.
+2014-06-06 13:10:26.477 Poptart[50356:70b] Finished load of: file:///Users/crohacz/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/2164C606-A19D-4980-9B32-EEB1593F2C50/Poptart.app/www/index.html
+2014-06-06 13:10:26.481 Poptart[50356:70b] ERROR: Plugin 'Device' not found, or is not a CDVPlugin. Check your plugin mapping in config.xml.
+2014-06-06 13:10:26.481 Poptart[50356:70b] -[CDVCommandQueue executePending] [Line 158] FAILED pluginJSON = [
+  "Device1255234423",
+  "Device",
+  "getDeviceInfo",
+  [
+
+  ]
+]
+2014-06-06 13:10:26.482 Poptart[50356:70b] ERROR: Plugin 'NetworkStatus' not found, or is not a CDVPlugin. Check your plugin mapping in config.xml.
+2014-06-06 13:10:26.482 Poptart[50356:70b] -[CDVCommandQueue executePending] [Line 158] FAILED pluginJSON = [
+  "NetworkStatus1255234424",
+  "NetworkStatus",
+  "getConnectionInfo",
+  [
+
+  ]
+]
+2014-06-06 13:10:29.486 Poptart[50356:70b] Resetting plugins due to page load.
+2014-06-06 13:10:29.588 Poptart[50356:70b] Finished load of: file:///Users/crohacz/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/2164C606-A19D-4980-9B32-EEB1593F2C50/Poptart.app/www/locations.html
+2014-06-06 13:10:34.060 Poptart[50356:70b] Resetting plugins due to page load.
+2014-06-06 13:10:34.171 Poptart[50356:70b] Finished load of: file:///Users/crohacz/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/2164C606-A19D-4980-9B32-EEB1593F2C50/Poptart.app/www/index.html
+2014-06-06 13:10:34.177 Poptart[50356:70b] ERROR: Plugin 'Device' not found, or is not a CDVPlugin. Check your plugin mapping in config.xml.
+2014-06-06 13:10:34.178 Poptart[50356:70b] -[CDVCommandQueue executePending] [Line 158] FAILED pluginJSON = [
+  "Device1249122711",
+  "Device",
+  "getDeviceInfo",
+  [
+
+  ]
+]
+2014-06-06 13:10:34.178 Poptart[50356:70b] ERROR: Plugin 'NetworkStatus' not found, or is not a CDVPlugin. Check your plugin mapping in config.xml.
+2014-06-06 13:10:34.178 Poptart[50356:70b] -[CDVCommandQueue executePending] [Line 158] FAILED pluginJSON = [
+  "NetworkStatus1249122712",
+  "NetworkStatus",
+  "getConnectionInfo",
+  [
+
+  ]
+]
+2014-06-06 13:10:35.966 Poptart[50356:70b] Resetting plugins due to page load.
+2014-06-06 13:10:36.069 Poptart[50356:70b] Finished load of: file:///Users/crohacz/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/2164C606-A19D-4980-9B32-EEB1593F2C50/Poptart.app/www/locations.html
+2014-06-06 13:10:39.112 Poptart[50356:70b] Resetting plugins due to page load.
+2014-06-06 13:10:39.210 Poptart[50356:70b] Finished load of: file:///Users/crohacz/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/2164C606-A19D-4980-9B32-EEB1593F2C50/Poptart.app/www/index.html
+2014-06-06 13:10:39.215 Poptart[50356:70b] ERROR: Plugin 'Device' not found, or is not a CDVPlugin. Check your plugin mapping in config.xml.
+2014-06-06 13:10:39.215 Poptart[50356:70b] -[CDVCommandQueue executePending] [Line 158] FAILED pluginJSON = [
+  "Device1038134604",
+  "Device",
+  "getDeviceInfo",
+  [
+
+  ]
+]
+2014-06-06 13:10:39.215 Poptart[50356:70b] ERROR: Plugin 'NetworkStatus' not found, or is not a CDVPlugin. Check your plugin mapping in config.xml.
+2014-06-06 13:10:39.216 Poptart[50356:70b] -[CDVCommandQueue executePending] [Line 158] FAILED pluginJSON = [
+  "NetworkStatus1038134605",
+  "NetworkStatus",
+  "getConnectionInfo",
+  [
+
+  ]
+]
+2014-06-06 13:10:40.724 Poptart[50356:70b] Resetting plugins due to page load.
+2014-06-06 13:10:40.828 Poptart[50356:70b] Finished load of: file:///Users/crohacz/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/2164C606-A19D-4980-9B32-EEB1593F2C50/Poptart.app/www/locations.html

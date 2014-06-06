@@ -12,6 +12,7 @@
 		
 		<link rel="stylesheet" type="text/css" href="css/jquery.mobile.flatui.css">
     	<link rel="stylesheet" type="text/css" href="css/index.css">
+		<link rel="stylesheet" type="text/css" href="css/jquery.mobile.flatui.2.css">
     	<!--<script type="text/javascript" src="js/cordova.js"></script>-->
     	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>    
     	<script type="text/javascript" src="js/jquery.ui.map.js"></script>
@@ -23,13 +24,26 @@
     </head>
     <body>
     	<div data-role="page" id="map-page" data-dom-cache="true" data-theme="a">
-    		<div data-role="header" class="ui-header ui-bar-a">
-    			<a href="index.html" rel="external" data-role="button" data-icon="flat-menu" data-iconpos="notext" data-theme="c" data-inline="true"></a>
+    		<div data-role="panel" id="mypanel" class="ui-panel" data-display="push" data-position="right" data-position-fixed="true" data-theme="a">
+    			<a href="#" data-rel="close" data-role="button" data-icon="flat-cross" data-iconpos="notext" data-theme="a"></a>
+    			<ul>
+    				<li> Location #1 </li>
+    			</ul>
+    		</div><!--end of panel-->
+    		<div data-role="header" class="ui-header ui-bar-a" role="banner">
+    			<a href="index.html" rel="external" class="ui-btn-left" data-role="button" data-icon="flat-menu" data-iconpos="notext" data-theme="a" data-inline="true"></a>
     			<h1> Locations</h1>
-			<a href="settings.html" rel="external" data-role="button" data-icon="flat-settings" data-iconpos="notext" data-theme="c" data-inline="true"></a>
-		</div><!--/header-->
-        	
-        	<div data-role="content" id="content" style="width:100%; height:auto; padding:0;"> 
+				<a href="settings.html" rel="external" class="ui-btn-right" data-role="button" data-icon="flat-settings" data-iconpos="notext" data-theme="a" data-inline="true"></a>
+			</div><!--/header-->
+        	<div data-role="content" id="content" style="width:100%; height:auto; padding:0;">
+        			<a href="#mypanel" role="button" id="open-panel" data-corners="true" data-wrapperels="span" data-icon="arrow-l" data-theme="a" class="ui-btn ui-shadow ui-btn-corner-all ui-btn-icon-left ui-mini">
+        				<span class="ui-btn-inner">
+        					<span class="ui-btn-text">
+        						<span>List</span>
+        					</span>
+        					<span class="ui-icon ui-icon-arrow-l">&nbsp;</span>
+        				</span>
+        			</a>
     				<div id="mapcontainer">
     				</div>	
         	</div><!--/content-->
@@ -39,6 +53,8 @@
     	  // Make your jQuery Mobile framework configuration changes here!
           $.mobile.allowCrossDomainPages = true;
         });
+        
+        $("#mypanel").panel("open");
 	</script>
     </body>
 </html>

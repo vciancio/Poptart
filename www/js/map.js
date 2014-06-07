@@ -36,14 +36,12 @@ function goToMarker(key){
 
   infoWindow.setContent(infoContent);
 
-  if(lastOpened >= 0 && lastOpened != key){
-    infoWindow.close(map,markers[lastOpened]);
-  }
-  else if(lastOpened == key){
+  if(lastOpened == key){
     infoWindow.close(map, key);
     lastOpened = -1;
   }
   else{
+    infoWindow.close(map, lastOpened);
     infoWindow.open(map,markers[key]);
     map.setCenter(markers[key].position);
     lastOpened = key;
@@ -58,13 +56,21 @@ function displayMap(currentPosition,nodeArray) {
     center: currentPosition,
     mapTypeControl: false,
     navigationControlOptions: {
-      style: google.maps.NavigationControlStyle.SMALL
+      style: google.maps.NavigationControlStyle.NONE
     },
+    panControl: false,
+    zoomControl:false,
+    scaleControl: false,
+    streetViewControl: false,
+    overviewMapControl: false,
     mapTypeId: google.maps.MapTypeId.ROADMAP
   };
 
   map = new google.maps.Map(document.getElementById("mapcontainer"), options);
 //  map.addEventListener("mousemove", throttle_events, true);
+  google.maps.event.addListener(infoWindow, 'closeclick', function() {
+    lastOpened = -1;
+  });
 
   $.each(nodes,function(key, node){
     console.log(node);
@@ -87,7 +93,7 @@ function displayMap(currentPosition,nodeArray) {
 } //end function success
 
 $.ajax({
-  url: "http://162.243.138.94:6543/api/clinic/get?zipcode=95050&callback=jsonp",
+  url: "http://162.243.138.94:6543/api/clinic/get?callback=jsonp",//&zipcode=95050",
   jsonp: "callback",
   dataType: "jsonp",
   success: function( data ){
@@ -105,7 +111,7 @@ $.ajax({
         }
       );
       var myCoords = new google.maps.LatLng(37.3492,-121.9381);
-//      displayMap(myCoords, nodes);
+      //displayMap(myCoords, nodes);
       $("<ul/>", {
         "data-role": "listview",
         "data-inset": "true",

@@ -1,3 +1,12 @@
+var map;
+var markers     = [];
+var nodes       = [];
+var lastOpened  = -1;
+var infoContent = "";
+var infoWindow  = new google.maps.InfoWindow({
+  content: infoContent
+});
+
 function throttle_events(event) {
     var now = new Date();
     var distance = Math.sqrt(Math.pow(event.clientX - last.x, 2) + Math.pow(event.clientY - last.y, 2));
@@ -17,8 +26,33 @@ function throttle_events(event) {
     };
 };
 
+function goToMarker(key){
+  var infoContent =
+    '<div id="map-info-window">'+
+    '<div id="siteNotice">'+'</div>'+
+    '<h1>'+nodes[key].name+'</h1>'+
+    '<div >'+nodes[key].description+'</div>'+
+    '</div>';
+
+  infoWindow.setContent(infoContent);
+
+  if(lastOpened >= 0 && lastOpened != key){
+    infoWindow.close(map,markers[lastOpened]);
+  }
+  else if(lastOpened == key){
+    infoWindow.close(map, key);
+    lastOpened = -1;
+  }
+  else{
+    infoWindow.open(map,markers[key]);
+    map.setCenter(markers[key].position);
+    lastOpened = key;
+  }
+}
+
 //Display Google Maps
-function displayMap(currentPosition,nodes) {
+function displayMap(currentPosition,nodeArray) {
+  nodes = nodeArray;
   var options = {
     zoom: 15,
     center: currentPosition,
@@ -29,10 +63,9 @@ function displayMap(currentPosition,nodes) {
     mapTypeId: google.maps.MapTypeId.ROADMAP
   };
 
-  var map = new google.maps.Map(document.getElementById("mapcontainer"), options);
+  map = new google.maps.Map(document.getElementById("mapcontainer"), options);
 //  map.addEventListener("mousemove", throttle_events, true);
-  var lastOpened = -1;
-  var markers = [];
+
   $.each(nodes,function(key, node){
     console.log(node);
     var coords = new google.maps.LatLng(node.latitude, node.longitude);
@@ -42,29 +75,8 @@ function displayMap(currentPosition,nodes) {
       title: node.name
     });
     markers.push(marker);
-    var infoContent =
-      '<div id="map-info-window">'+
-        '<div id="siteNotice">'+'</div>'+
-        '<h1>'+node.name+'</h1>'+
-        '<div >'+node.description+'</div>'+
-      '</div>';
-    var infoWindow = new google.maps.InfoWindow({
-      content: infoContent
-    });
     google.maps.event.addListener(marker, 'click', function() {
-      if(lastOpened >= 0 && lastOpened != key){
-        infoWindow.close(map,markers[lastOpened]);
-        alert(markers[lastOpened]);
-      }
-      else if(lastOpened == key){
-        infoWindow.close(map, key);
-        lastOpened = -1;
-      }
-      else{
-        infoWindow.open(map,marker);
-        map.setCenter(marker.position);
-        lastOpened = key;
-      }
+      goToMarker(key);
     });
   });
 
@@ -84,10 +96,7 @@ $.ajax({
       $.each(data.nodes, function(key, object){
         console.log(object);
         nodes.push(object);
-        $.each( object, function(key, val){
-          items.push("<li class=ui-li id='" + key + "'>" + key + ": " + val + "</li>");
-        });
-//        success(nodes);
+          items.push("<li class='ui-li listview-item' id='location-"+key+"' data-rel='close' onclick='goToMarker("+key+")'>" + object.name + "</li>");
       });
       navigator.geolocation.getCurrentPosition(
         function(position){
@@ -96,15 +105,15 @@ $.ajax({
         }
       );
       var myCoords = new google.maps.LatLng(37.3492,-121.9381);
-//      displayMap(myCoords, nodes);
-/*      $("<ul/>", {
+      displayMap(myCoords, nodes);
+      $("<ul/>", {
         "data-role": "listview",
-        "data-inset": "true", 
-        "class":"ui-listview ui-listview-inset",
+        "data-inset": "true",
+        "class":"ui-listview",//ui-listview-inset",
+        "data-autodividers":"true",
         "id":"map-list",
-        "data-theme": "b",
+//      "data-theme": "b",
         html: items.join("")
-      });//.appendTo("body");
-*/
+      }).appendTo("#locations-list-container");
   }
 });

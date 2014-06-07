@@ -24,13 +24,12 @@
     </head>
     <body>
     	<div data-role="page" id="map-page" data-dom-cache="true" data-theme="a">
-    		<div data-role="panel" id="mypanel" class="ui-panel" data-display="push" data-position="right" data-position-fixed="true" data-theme="a">
+    		<div data-role="panel" id="mypanel" class="ui-panel sidepanel" data-display="push" data-position="right" data-position-fixed="true" data-theme="a">
     			<a href="#" data-rel="close" data-role="button" data-icon="flat-cross" data-iconpos="notext" data-theme="a"></a>
-    			<ul>
-    				<li> Location #1 </li>
-    			</ul>
+                        <div id="locations-list-container">
+                        </div>
     		</div><!--end of panel-->
-    		<div data-role="header" class="ui-header ui-bar-a" role="banner">
+    		<div data-role="header" class="ui-header ui-bar-a" role="banner" style="height:48px;">
     			<a href="index.html" rel="external" class="ui-btn-left" data-role="button" data-icon="flat-menu" data-iconpos="notext" data-theme="a" data-inline="true"></a>
     			<h1> Locations</h1>
 				<a href="settings.html" rel="external" class="ui-btn-right" data-role="button" data-icon="flat-settings" data-iconpos="notext" data-theme="a" data-inline="true"></a>

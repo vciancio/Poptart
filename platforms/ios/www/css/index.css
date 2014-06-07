@@ -13,7 +13,7 @@ html, body {
 }
 
 #map-content { 
-    padding: 151515151515151515151515151515px;
+    padding: 15px;
     width: 100%;
     height 80%;
 }
@@ -38,4 +38,14 @@ html, body {
 	overflow: hidden;
 	right: 0px;
 	
+}
+
+#block1 { 
+	min-width: 50%; 
+}
+
+#block1-text { 
+	word-wrap: break-word;
+	display: flex; 
+	flex-wrap: wrap; 
 }

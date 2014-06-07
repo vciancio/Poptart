@@ -105,7 +105,7 @@ $.ajax({
         }
       );
       var myCoords = new google.maps.LatLng(37.3492,-121.9381);
-      displayMap(myCoords, nodes);
+//      displayMap(myCoords, nodes);
       $("<ul/>", {
         "data-role": "listview",
         "data-inset": "true",

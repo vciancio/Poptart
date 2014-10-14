@@ -7,6 +7,7 @@ var infoWindow  = new google.maps.InfoWindow({
   content: infoContent
 });
 
+
 function throttle_events(event) {
     var now = new Date();
     var distance = Math.sqrt(Math.pow(event.clientX - last.x, 2) + Math.pow(event.clientY - last.y, 2));
@@ -30,8 +31,10 @@ function goToMarker(key){
   var infoContent =
     '<div id="map-info-window">'+
     '<div id="siteNotice">'+'</div>'+
-    '<h1>'+nodes[key].name+'</h1>'+
-    '<div >'+nodes[key].description+'</div>'+
+    '<h2>'+nodes[key].name+'</h2>'+
+    '<div id="bodyContent"> <p>'+nodes[key].description + '</p>' +
+    '<h4><strong> Address:</strong></h4>'+nodes[key].address+'</div> <br> <br>'+
+    '<a href="#">Directions</a>   <a href="#">Contact </a>' + 
     '</div>';
 
   infoWindow.setContent(infoContent);
@@ -48,6 +51,7 @@ function goToMarker(key){
   }
 }
 
+
 //Display Google Maps
 function displayMap(currentPosition,nodeArray) {
   nodes = nodeArray;
@@ -59,14 +63,19 @@ function displayMap(currentPosition,nodeArray) {
       style: google.maps.NavigationControlStyle.NONE
     },
     panControl: false,
-    zoomControl:false,
-    scaleControl: false,
+    zoomControl:true,
+    zoomControlOptions:  {
+    	style: google.maps.ZoomControlStyle.DEFAULT
+    },
+    scaleControl: true,
     streetViewControl: false,
-    overviewMapControl: false,
+    overviewMapControl: true,
     mapTypeId: google.maps.MapTypeId.ROADMAP
   };
 
   map = new google.maps.Map(document.getElementById("mapcontainer"), options);
+
+
 //  map.addEventListener("mousemove", throttle_events, true);
   google.maps.event.addListener(infoWindow, 'closeclick', function() {
     lastOpened = -1;
@@ -102,7 +111,7 @@ $.ajax({
       $.each(data.nodes, function(key, object){
         console.log(object);
         nodes.push(object);
-          items.push("<li class='ui-li listview-item' id='location-"+key+"' data-rel='close' onclick='goToMarker("+key+")'>" + object.name + "</li>");
+          items.push("<li class='ul-li listview-item' id='location-"+key+"' data-rel='close' onclick='goToMarker("+key+")'><a href='#'>"+ (key+1) +".&nbsp;" + object.name + "</a></li>");
       });
       navigator.geolocation.getCurrentPosition(
         function(position){
@@ -118,7 +127,9 @@ $.ajax({
         "class":"ui-listview",//ui-listview-inset",
         "data-autodividers":"true",
         "id":"map-list",
-//      "data-theme": "b",
+        "data-filter": "true",
+        "data-placeholder":"Search locations...",
+      	"data-theme": "c",
         html: items.join("")
       }).appendTo("#locations-list-container");
   }

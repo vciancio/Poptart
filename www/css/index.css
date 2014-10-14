@@ -1,7 +1,7 @@
 html, body { 
     font-size: .9em; 
     font-family: Arial, Helvetica, Sans-Serif;
-    background #6666;
+    background #666666;
     padding: 0px;
 }
 
@@ -15,7 +15,7 @@ html, body {
 #map-content { 
     padding: 15px;
     width: 100%;
-    height 80%;
+    height: 100%;
 }
 
 #map-page { 
@@ -32,6 +32,7 @@ html, body {
 }
 
 #content { 
+    height: 100%;
     padding: 0;
     position : absolute !important;
     top : 40px !important;
@@ -44,8 +45,13 @@ html, body {
   webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
-#mypanel{
-  background-color: #2c3e50;
+#myPanel{
+  background-color: #000;
+}
+
+h1#panel-title { 
+  color: white;
+  text-decoration: underline;
 }
 
 .listview-item{
@@ -54,6 +60,10 @@ html, body {
   color:#fff;
   font-weight:bold;
   font-size:150%
+}
+
+ul#map-list.ui-listview { 
+  list-style-type: circle;
 }
 
 #open-panel { 
@@ -73,3 +83,5 @@ html, body {
 	display: flex; 
 	flex-wrap: wrap; 
 }
+
+

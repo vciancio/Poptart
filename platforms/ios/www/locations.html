@@ -13,7 +13,7 @@
 		<link rel="stylesheet" type="text/css" href="css/jquery.mobile.flatui.css">
     	<link rel="stylesheet" type="text/css" href="css/index.css">
 		<link rel="stylesheet" type="text/css" href="css/jquery.mobile.flatui.2.css">
-    	<!--<script type="text/javascript" src="js/cordova.js"></script>-->
+    	<script type="text/javascript" src="js/cordova.js"></script>
     	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>    
     	<script type="text/javascript" src="js/jquery.ui.map.js"></script>
     	<script type="text/javascript" src="js/jquery.ui.map.extensions.js"></script>
@@ -21,22 +21,91 @@
         <script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
         <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
     	<script type="text/javascript" src="js/map.js"></script>
+
+        <style>
+        #bodyContent { 
+            display:inline;
+        }
+
+        #closePanel { 
+            position:absolute;
+            right:10px;
+        }
+
+        #myPanel { 
+            padding-top: 30px;
+        }
+        #map-list {
+            padding-top:40px;
+        }
+
+        .ui-listview > li {
+            width:auto;
+            font-size: 14px;
+            padding: 6% 0;
+        }
+
+        .listview-item { 
+            text-transform: capitalize;
+            border-bottom: 1px solid gray;
+            position:relative;
+            top:10px;
+        }
+
+        .listview-item a:link{ 
+            text-decoration:none;
+        }
+
+        .listview-item a:hover { 
+
+            text-decoration:underline;
+        }
+
+        div.ui-controlgroup-controls { 
+            width:100%;
+        }
+
+        .ui-controlgroup-horizontal .ui-controlgroup-controls > .ui-btn { 
+            width: 16%;
+        }
+
+        #map-info-window { 
+            text-transform: capitalize;
+        }
+
+        #map-info-window a{ 
+            color:gray;
+        }
+        </style>
     </head>
     <body>
-    	<div data-role="page" id="map-page" data-dom-cache="true" data-theme="a">
-    		<div data-role="panel" id="mypanel" class="ui-panel" data-display="push" data-position="right" data-position-fixed="true" data-theme="a">
-    			<a href="#" data-rel="close" data-role="button" data-icon="flat-cross" data-iconpos="notext" data-theme="a"></a>
-    			<ul>
-    				<li> Location #1 </li>
-    			</ul>
+    	<div data-role="page" id="map-page" data-dom-cache="true" data-theme="c">
+    		<div data-role="panel" id="myPanel" data-role="panel" class="ui-panel sidepanel" data-display="overlay" data-position="right" data-position-fixed="true" data-theme="c">
+    			<a href="#" id="closePanel" data-rel="close" data-role="button" data-icon="flat-cross" data-iconpos="notext" data-theme="c"></a>
+                        <h1 id="panel-title"></h1>
+                        <div id="locations-list-container">
+                        </div>
     		</div><!--end of panel-->
-    		<div data-role="header" class="ui-header ui-bar-a" role="banner">
-    			<a href="index.html" rel="external" class="ui-btn-left" data-role="button" data-icon="flat-menu" data-iconpos="notext" data-theme="a" data-inline="true"></a>
+    		<div data-role="header" class="ui-header ui-bar-c" role="banner" style="height:48px;" data-theme="c">
+    			<a href="index.html" rel="external" class="ui-btn-left" data-role="button" data-icon="flat-menu" data-iconpos="notext" data-theme="c" data-inline="true"></a>
     			<h1> Locations</h1>
-				<a href="settings.html" rel="external" class="ui-btn-right" data-role="button" data-icon="flat-settings" data-iconpos="notext" data-theme="a" data-inline="true"></a>
+				<a href="settings.html" rel="external" class="ui-btn-right" data-role="button" data-icon="flat-settings" data-iconpos="notext" data-theme="c" data-inline="true"></a>
 			</div><!--/header-->
-        	<div data-role="content" id="content" style="width:100%; height:auto; padding:0;">
-        			<a href="#mypanel" role="button" id="open-panel" data-corners="true" data-wrapperels="span" data-icon="arrow-l" data-theme="a" class="ui-btn ui-shadow ui-btn-corner-all ui-btn-icon-left ui-mini">
+        	<div data-role="content" id="content" style="width:100%; height:100%; padding:0;">
+                    <fieldset data-role="controlgroup" data-type="horizontal">
+                            <a href="locations.html" rel="external" data-icon="flat-location" data-theme="c" data-iconpos="notext" data-role="button">
+                                <span></span>
+                            </a>
+                            <a href="user.html" rel="external" data-icon="flat-man" data-theme="c" data-iconpos="notext" data-role="button">
+                                <span></span>
+                            </a>
+                            <a href="medhist.html" rel="external" data-icon="flat-new" data-theme="c" data-iconpos="notext" data-role="button">
+                                <span></span>
+                            </a>
+                            <a href="settings.html" rel="external" data-icon="flat-plus" data-theme="c" data-iconpos="notext" data-role="button">
+                            </a>
+                    </fieldset>
+        			<a href="#myPanel" role="button" id="open-panel" data-corners="true" data-wrapperels="span" data-icon="arrow-l" data-theme="c" class="ui-btn ui-shadow ui-btn-corner-all ui-btn-icon-left ui-mini">
         				<span class="ui-btn-inner">
         					<span class="ui-btn-text">
         						<span>List</span>
@@ -54,7 +123,9 @@
           $.mobile.allowCrossDomainPages = true;
         });
         
-        $("#mypanel").panel("open");
+        $("#myPanel").panel("open");
+
+
 	</script>
     </body>
 </html>

@@ -1,0 +1,131 @@
+/*COMMON*/
+
+#header { 
+	position:absolute;
+	top:0; left:0;
+	width:100%;
+	height:45px;
+	line-height:45px;
+	padding:0;
+	text-align:center;
+}
+
+#footer { 
+	position:absolute;
+	bottom:0; left:0;
+	width:100%;
+	height:48px;
+	padding:0;
+}
+
+div.ui-controlgroup-controls { 
+    width:100%;
+}
+
+.ui-controlgroup-horizontal .ui-controlgroup-controls > .ui-btn { 
+    width: 16%;
+}
+
+.ui-controlgroup, fieldset.ui-controlgroup { 
+	position:absolute;
+	top:0; left:0;
+	width:100%;
+	height:40px;
+	line-height:40px;
+	padding:0;
+}
+
+/*USER PAGE*/
+
+ul#userInfo { 
+    list-style: none;
+}
+
+#userInfo li { 
+    padding: 4px;
+    font-weight:bold;
+}
+
+ul#userInfo li span{ 
+    left:100%;
+    margin-bottom:10px;
+    font-weight:normal;
+}
+
+
+        .ui-tabs.ui-tabs-vertical {
+            padding: 0;
+            width: 42em;
+        }
+        .ui-tabs.ui-tabs-vertical .ui-widget-header {
+            border: none;
+        }
+        .ui-tabs.ui-tabs-vertical .ui-tabs-nav {
+            float:left;
+            width: 10em;
+            border-radius: 4px;
+            /*border-right: 1px solid gray;*/
+            list-style:none;
+            margin-left:-40px;
+            margin-top:-10px;
+            
+        }
+        .ui-tabs.ui-tabs-vertical .ui-tabs-nav li {
+            clear: left;
+            width: 100%;
+            border-bottom: 1px solid gray;
+            border-width: 1px 0 1px 1px;
+            /*border-radius: 4px 0 0 4px;*/
+            /*overflow: hidden;*/
+            position: relative;
+            /*right: -2px;*/
+            z-index: 2;
+        }
+        .ui-tabs.ui-tabs-vertical .ui-tabs-nav li a {
+            display: block;
+            /*width: 100%;*/
+            padding: 0.6em 1em;
+            text-decoration:none;
+        }
+        .ui-tabs.ui-tabs-vertical .ui-tabs-nav li a:hover {
+            cursor: pointer;
+        }   
+        .ui-tabs.ui-tabs-vertical .ui-tabs-nav li.ui-tabs-active {
+            margin-bottom: 0.2em;
+            padding-bottom: 0;
+            border-right: 1px solid white;
+        }
+        .ui-tabs.ui-tabs-vertical .ui-tabs-nav li:last-child {
+            margin-bottom: 10px;
+        }
+        .ui-tabs.ui-tabs-vertical .ui-tabs-panel {
+            float: left;
+            width: 18em;
+            border-radius: 0;
+            position: relative;
+            left: -1px;
+            border: 1px solid gray;
+            overflow:scroll;
+        }
+
+        .ui-tabs-panel p { 
+        	padding-left:10px;
+        }
+
+.ui-grid-a .ui-block-a { 
+	margin-top:8%;
+	left:0;
+}
+
+.ui-grid-a .ui-block-a, .ui-grid-a .ui-block-b { 
+	margin-top:9%;
+	left:15%;
+}
+
+.ui-grid-solo { 
+	overflow:scroll;
+	max-width:100%;
+}
+
+
+/*END USER PAGE*/

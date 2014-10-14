@@ -3,52 +3,112 @@
     <head>
         <meta name="format-detection" content="telephone=no" />
         <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
-        <meta name="viewport" content="height=device-height,width=device-width,initial-scale=1.0,maximum-scale=1.0" >
+        <meta name="viewport" content="height=device-height,width=device-width,initial-scale=1.0,maximum-scale=1.0, user-scalable=0" >
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="author" content="ChristineRohacz">
 		<meta charset="utf-8" />
 		<title>Poptart</title>
 	<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
 		<link rel="stylesheet" type="text/css" href="css/jquery.mobile.flatui.css">
-    	<link rel="stylesheet" type="text/css" href="css/index.css">
-    	<script type="text/javascript" src="js/cordova.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <link rel="stylesheet" type="text/css" href="css/jquery.mobile.flatui.2.css">
+        <script type="text/javascript" src="js/cordova.js"></script>
+        <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/themes/smoothness/jquery-ui.css" />
+        <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
     	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 		<script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
 
-        <style>
-            #userInfo ul { 
-                list-style: none;
-            }
-        </style>
     </head>
+    <style>
+        div.ui-block-b {
+            position:absolute;
+            right:-1px;
+            top:0; right:0;
+        }
+
+        div.ui-grid-solo { 
+            top:0; left:0;
+            max-width:100%;
+        }
+    </style>
     <body>
-    	<div data-role="page" id="user" data-dom-cache="true" data-theme="a">
+    	<div data-role="page" id="userPage" data-dom-cache="true">
     		<!--All header and footer divs must have the same data id so that the bars will appear fixed
     		outside of transition -->
-    		<div data-role="header" class="ui-header ui-bar-a" role="banner">
-    			<a href="index.html" rel="external" class="ui-btn-left" data-role="button" data-icon="flat-menu" data-iconpos="notext" data-theme="a" data-inline="true"></a>
-    			<h1>User Profile</h1>
-				<a href="settings.html" rel="external" class="ui-btn-right" data-role="button" data-icon="flat-settings" data-iconpos="notext" data-theme="a" data-inline="true"></a>
-			</div><!--/header-->
-        	<div data-role="content">
-                <div id="userInfo">
-    			 <h2> User Profile </h2>
-                    <h4> Information </h4>
-                    <ul>
-                        <li>Name:</li>
-                        <li>Age:</li>
-                        <li>Location:</li>
-                        <li> Email </li>
-                        
-                    </ul>
-                </div>
-                <div id="activityFeed">
-                    <h4> Recent Activity </h4>
-                </div>
-        	</div>
+    		<div data-role="header" class="ui-header ui-bar-c" role="banner" style="height:48px;" data-theme="c">
+                <a href="index.html" rel="external" class="ui-btn-left" data-role="button" data-icon="flat-menu" data-iconpos="notext" data-theme="c" data-inline="true"></a>
+                <h1>User Profile</h1>
+                <a href="settings.html" rel="external" class="ui-btn-right" data-role="button" data-icon="flat-settings" data-iconpos="notext" data-theme="c" data-inline="true"></a>
+            </div><!--/header-->
+            <div data-role="content" id="content" style="width:100%; height:100%; padding:0;">
+                <fieldset data-role="controlgroup" data-type="horizontal">
+                            <a href="locations.html" rel="external" data-icon="flat-location" data-theme="c" data-iconpos="notext" data-role="button">
+                                <span></span>
+                            </a>
+                            <a href="user.html" rel="external" data-icon="flat-man" data-theme="c" data-iconpos="notext" data-role="button">
+                                <span></span>
+                            </a>
+                            <a href="medhist.html" rel="external" data-icon="flat-new" data-theme="c" data-iconpos="notext" data-role="button">
+                                <span></span>
+                            </a>
+                            <a href="settings.html" rel="external" data-icon="flat-plus" data-theme="c" data-iconpos="notext" data-role="button">
+                            </a>
+                </fieldset>
+                    <fieldset class="ui-grid-a ui-responsive">
+                        <div class="ui-block-a">
+                                <img src="img/ic_action_person.png">
+                                <h2> Patient's Name</h2>
+                        </div><!--end of block a-->
+                        <div class="ui-block-b">
+                            <ul id="userInfo">
+                                <li>Name: <span>User's Name</span> </li>
+                                <li>Date of Birth: <span>1 January 1990</span> </li>
+                                <li>Location: <span>San Jose, California</span> </li> 
+                                <li>Contact: <span>noemail@gmail.com</span></li> 
+                            </ul>
+                        </div><!--end of block b-->
+                    </fieldset><!--end of grid a-->
+                    <div class="ui-grid-solo ui-responsive">
+                        <div class="ui-block-a">
+                            <div id="tabs" class="ui-tabs ui-widget ui-widget-content ui-corner-all ui-tabs-vertical ui-helper-clearfix">
+                                <ul class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all" role="tablist">
+                                    <li class="ui-state-default ui-corner-top" role="tab" tabindex="-1"><a href="#tabs-1" class="ui-tabs-anchor" role="presentation">Treatments</a></li>
+                                    <li class="ui-state-default ui-corner-top ui-tabs-selected ui-state-active"><a href="#tabs-2">Medications</a></li>
+                                    <li class="ui-state-default ui-corner-top"><a href="#tabs-3">Recent Activity</a></li>
+                                </ul>
+                                <div id="tabs-1" class="ui-tabs-panel ui-widget-content ui-corner-bottom ui-tabs-hide">
+                                    <p> This will contain all the patient's recent medical treatments
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultricies dictum dui, a vulputate dui faucibus ac. Nullam ut libero in ligula imperdiet consectetur ac vel dui. Curabitur leo libero, mattis imperdiet porta ut, rhoncus id turpis. Mauris molestie porttitor eros, sed fringilla felis porta non. Donec vel eleifend tellus, eget mattis sapien. Nulla nec fringilla est. Suspendisse tempor et metus sed porta. Duis sed augue id risus semper imperdiet. Aliquam non turpis libero. Quisque accumsan placerat mauris nec cursus. Phasellus sit amet vulputate nisl. 
+                                    </p>
+                                </div>
+                                <div id="tabs-2" class="ui-tabs-panel ui-widget-content ui-corner-bottom">
+                                    <p> This will contain all the patients current medications
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                    Vestibulum eu ligula nec sem semper convallis quis ac ex.
+                                    Sed gravida ante ut urna posuere porttitor a viverra tortor.
+                                    Duis sollicitudin nisi consectetur lectus aliquam imperdiet.
+                                    Curabitur id leo quis augue tempor efficitur sed eu magna.
+                                    </p>
+                                </div>
+                                <div id="tabs-3" class="ui-tabs-panel ui-widget-content ui-corner-bottom ui-tabs-hide">
+                                    <p> This field will contain all the patients most recent activity 
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pulvinar nulla sed libero lacinia ullamcorper. Suspendisse hendrerit tortor sed nunc posuere, in finibus eros laoreet. Vivamus lacinia semper massa, non tristique orci aliquet eget. Duis ut metus mattis, maximus purus ut, facilisis nisl. Pellentesque sollicitudin nibh in nisi pellentesque, pellentesque aliquet turpis lobortis. Maecenas commodo condimentum accumsan. Nunc feugiat pulvinar magna, vitae vulputate massa efficitur vitae. Mauris vel urna sit amet mauris dictum fringilla et nec magna. Suspendisse sagittis ac odio in euismod. Nunc nec condimentum turpis.
+                                    </p>
+                                </div>
+                            </div><!--end of tabs-->  
+                        </div><!--end of second block a -->
+                    </div><!--end of solo grid -->
+        	</div><!--end of page content-->
         	<div data-role="footer" data-position="fixed">		
 				<h3> Footer Content </h3>
 			</div><!-- /footer -->
     	</div><!--end of page-->
     </body>
+
+    <script type="text/javascript">
+        $('#tabs')
+            .tabs()
+            .addClass('ui-tabs-vertical ui-helper-clearfix');
+    </script>
 </html>

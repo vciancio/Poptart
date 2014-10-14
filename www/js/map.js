@@ -28,6 +28,7 @@ function throttle_events(event) {
 };
 
 function goToMarker(key){
+  $("#myPanel").panel("close");
   var infoContent =
     '<div id="map-info-window">'+
     '<div id="siteNotice">'+'</div>'+
@@ -111,7 +112,7 @@ $.ajax({
       $.each(data.nodes, function(key, object){
         console.log(object);
         nodes.push(object);
-          items.push("<li class='ul-li listview-item' id='location-"+key+"' data-rel='close' onclick='goToMarker("+key+")'><a href='#'>"+ (key+1) +".&nbsp;" + object.name + "</a></li>");
+          items.push("<li class='ul-li listview-item' id='location-"+key+"' data-rel='close' onclick='goToMarker("+key+")'><a href='#'>"+ (key+1) +".&nbsp;" + object.name + "</a></br>" + object.address + "</li>");
       });
       navigator.geolocation.getCurrentPosition(
         function(position){
@@ -125,7 +126,6 @@ $.ajax({
         "data-role": "listview",
         "data-inset": "true",
         "class":"ui-listview",//ui-listview-inset",
-        "data-autodividers":"true",
         "id":"map-list",
         "data-filter": "true",
         "data-placeholder":"Search locations...",

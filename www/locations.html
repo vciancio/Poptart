@@ -42,6 +42,14 @@
         .ui-listview > li {
             width:auto;
             font-size: 14px;
+            padding: 6% 0;
+        }
+
+        .listview-item { 
+            text-transform: capitalize;
+            border-bottom: 1px solid gray;
+            position:relative;
+            top:10px;
         }
 
         .listview-item a:link{ 
@@ -49,13 +57,30 @@
         }
 
         .listview-item a:hover { 
+
             text-decoration:underline;
+        }
+
+        div.ui-controlgroup-controls { 
+            width:100%;
+        }
+
+        .ui-controlgroup-horizontal .ui-controlgroup-controls > .ui-btn { 
+            width: 16%;
+        }
+
+        #map-info-window { 
+            text-transform: capitalize;
+        }
+
+        #map-info-window a{ 
+            color:gray;
         }
         </style>
     </head>
     <body>
     	<div data-role="page" id="map-page" data-dom-cache="true" data-theme="c">
-    		<div data-role="panel" id="myPanel" class="ui-panel sidepanel" data-display="overlay" data-position="right" data-position-fixed="true" data-theme="c">
+    		<div data-role="panel" id="myPanel" data-role="panel" class="ui-panel sidepanel" data-display="overlay" data-position="right" data-position-fixed="true" data-theme="c">
     			<a href="#" id="closePanel" data-rel="close" data-role="button" data-icon="flat-cross" data-iconpos="notext" data-theme="c"></a>
                         <h1 id="panel-title"></h1>
                         <div id="locations-list-container">
@@ -67,7 +92,19 @@
 				<a href="settings.html" rel="external" class="ui-btn-right" data-role="button" data-icon="flat-settings" data-iconpos="notext" data-theme="c" data-inline="true"></a>
 			</div><!--/header-->
         	<div data-role="content" id="content" style="width:100%; height:100%; padding:0;">
-            
+                    <fieldset data-role="controlgroup" data-type="horizontal">
+                            <a href="locations.html" rel="external" data-icon="flat-location" data-theme="c" data-iconpos="notext" data-role="button">
+                                <span></span>
+                            </a>
+                            <a href="user.html" rel="external" data-icon="flat-man" data-theme="c" data-iconpos="notext" data-role="button">
+                                <span></span>
+                            </a>
+                            <a href="medhist.html" rel="external" data-icon="flat-new" data-theme="c" data-iconpos="notext" data-role="button">
+                                <span></span>
+                            </a>
+                            <a href="settings.html" rel="external" data-icon="flat-plus" data-theme="c" data-iconpos="notext" data-role="button">
+                            </a>
+                    </fieldset>
         			<a href="#myPanel" role="button" id="open-panel" data-corners="true" data-wrapperels="span" data-icon="arrow-l" data-theme="c" class="ui-btn ui-shadow ui-btn-corner-all ui-btn-icon-left ui-mini">
         				<span class="ui-btn-inner">
         					<span class="ui-btn-text">
@@ -87,6 +124,8 @@
         });
         
         $("#myPanel").panel("open");
+
+
 	</script>
     </body>
 </html>

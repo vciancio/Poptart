@@ -73,7 +73,7 @@
   line-height: 18px;
   -webkit-font-smoothing: antialiased;
 }
-
+/*
 .ui-icon-flat-video:before {
   content: "\e000"; }
 
@@ -133,7 +133,7 @@
 
 .ui-icon-flat-camera:before {
   content: "\e004"; }
-
+*/
 .ui-bar-a{border:1px solid #2c3e50;background:#2c3e50;color:#fff;font-weight:bold;font-family:Lato,sans-serif;}
 .ui-bar-a .ui-link-inherit{color:#3e3e3e}
 .ui-bar-a a.ui-link{color:#7cc4e7;font-weight:bold;}
@@ -2781,7 +2781,7 @@ div.ui-slider-switch.ui-mini {
 }
 /* panel */
 .ui-panel {
-	width: 20em;
+	width: 100%;
 	min-height: 100%;
 	max-height: none;
 	border-width: 0;
@@ -2887,15 +2887,15 @@ div.ui-slider-switch.ui-mini {
 }
 /* panel right */
 .ui-panel-position-right {
-	right: -17em;
+	right: -100%;
 }
 /* animated: panel right (for overlay and push) */
 .ui-panel-animate.ui-panel-position-right.ui-panel-display-overlay,
 .ui-panel-animate.ui-panel-position-right.ui-panel-display-push {
 	right: 0;
-	-webkit-transform: translate3d(17em,0,0);
-	-moz-transform: translate3d(17em,0,0);
-	transform: translate3d(17em,0,0);
+	-webkit-transform: translate3d(100%,0,0);
+	-moz-transform: translate3d(100%,0,0);
+	transform: translate3d(100%,0,0);
 }
 /* panel right open */
 .ui-panel-position-right.ui-panel-display-reveal,  /* negate "panel right" for reveal */
@@ -2924,16 +2924,16 @@ div.ui-slider-switch.ui-mini {
 .ui-panel-animate.ui-panel-content-wrap-position-left.ui-panel-content-wrap-open.ui-panel-content-wrap-display-push {
 	left: 0;
 	right: 0;
-	-webkit-transform: translate3d(17em,0,0);
-	-moz-transform: translate3d(17em,0,0);
-	transform: translate3d(17em,0,0);
+	-webkit-transform: translate3d(100%,0,0);
+	-moz-transform: translate3d(100%,0,0);
+	transform: translate3d(100%,0,0);
 }
 /* panel right open */
 .ui-panel-content-fixed-toolbar-position-right.ui-panel-content-fixed-toolbar-open,
 .ui-panel-content-wrap-position-right.ui-panel-content-wrap-open,
 .ui-panel-dismiss-position-right.ui-panel-dismiss-open {
-	left: -17em;
-	right: 17em;
+	left: -100%;
+	right: 100%;
 }
 /* animated: panel right open (for reveal and push) */
 .ui-panel-animate.ui-panel-content-fixed-toolbar-position-right.ui-panel-content-fixed-toolbar-open.ui-panel-content-fixed-toolbar-display-reveal,
@@ -2942,9 +2942,9 @@ div.ui-slider-switch.ui-mini {
 .ui-panel-animate.ui-panel-content-wrap-position-right.ui-panel-content-wrap-open.ui-panel-content-wrap-display-push {
 	left: 0;
 	right: 0;
-	-webkit-transform: translate3d(-17em,0,0);
-	-moz-transform: translate3d(-17em,0,0);
-	transform: translate3d(-17em,0,0);
+	-webkit-transform: translate3d(-100%,0,0);
+	-moz-transform: translate3d(-100%,0,0);
+	transform: translate3d(-100%,0,0);
 }
 /* negate "panel left/right open" for overlay */
 .ui-panel-content-fixed-toolbar-open.ui-panel-content-fixed-toolbar-display-overlay,

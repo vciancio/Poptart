@@ -74,11 +74,11 @@ ul#map-list.ui-listview {
 	
 }
 
-#block1 { 
-	min-width: 50%; 
+.ui-block-a { 
+	min-width: 100%; 
 }
 
-#block1-text { 
+.ui-btn-text { 
 	word-wrap: break-word;
 	display: flex; 
 	flex-wrap: wrap; 

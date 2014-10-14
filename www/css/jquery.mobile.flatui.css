@@ -675,7 +675,6 @@ div.ui-mobile-viewport {
 .ui-btn-icon-top:after,
 .ui-btn-icon-bottom:after,
 .ui-btn-icon-notext:after {
-	content: "";
 	position: absolute;
 	display: block;
 	width: 22px;
